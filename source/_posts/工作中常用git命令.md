@@ -9,7 +9,7 @@ tags: git
 > 主分支：mastre
 > 本地开发分支 dev3.3.3
 > 远程仓库分支 dev3.3.3
-
+<!-- more -->
 ## 配置用户名
 
 ```bash
