@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>做一条努力的鱼 | 小鱼儿要游去哪里</title>
+  <title>yii2 使用七牛云上传图片 | 小鱼儿要游去哪里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="做一条努力的鱼">
-<meta property="og:url" content="http://yoursite.com/2019/02/24/hello-world/index.html">
+  <meta name="description" content="使用七牛云作为图片服务器，主要分三步：  注册七牛云 配置七牛云 使用七牛云">
+<meta name="keywords" content="php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yii2 使用七牛云上传图片">
+<meta property="og:url" content="http://yoursite.com/2019/03/18/yii2-使用七牛云上传图片/index.html">
 <meta property="og:site_name" content="小鱼儿要游去哪里">
+<meta property="og:description" content="使用七牛云作为图片服务器，主要分三步：  注册七牛云 配置七牛云 使用七牛云">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://i.loli.net/2019/03/13/5c88bfd1c3605.jpg">
-<meta property="og:updated_time" content="2019-03-15T10:42:56.924Z">
+<meta property="og:image" content="https://i.loli.net/2019/03/19/5c8fc1462f553.png">
+<meta property="og:updated_time" content="2019-03-25T02:24:49.114Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="做一条努力的鱼">
-<meta name="twitter:image" content="https://i.loli.net/2019/03/13/5c88bfd1c3605.jpg">
+<meta name="twitter:title" content="yii2 使用七牛云上传图片">
+<meta name="twitter:description" content="使用七牛云作为图片服务器，主要分三步：  注册七牛云 配置七牛云 使用七牛云">
+<meta name="twitter:image" content="https://i.loli.net/2019/03/19/5c8fc1462f553.png">
   
     <link rel="alternative" href="/atom.xml" title="小鱼儿要游去哪里" type="application/atom+xml">
   
@@ -145,27 +149,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-yii2-使用七牛云上传图片" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      做一条努力的鱼
+      yii2 使用七牛云上传图片
     </h1>
   
 
         
-        <a href="/2019/02/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-02-24T07:28:27.727Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-24</time>
+        <a href="/2019/03/18/yii2-使用七牛云上传图片/" class="archive-article-date">
+  	<time datetime="2019-03-18T15:43:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://i.loli.net/2019/03/13/5c88bfd1c3605.jpg" alt="5c88bfd1c3605"></p>
+        <blockquote>
+<p>使用七牛云作为图片服务器，主要分三步：</p>
+<ul>
+<li>注册七牛云</li>
+<li>配置七牛云</li>
+<li>使用七牛云</li>
+</ul>
+<a id="more"></a>
+</blockquote>
+<ol>
+<li>第一步：注册七牛云</li>
+</ol>
+<blockquote>
+<p>详情见七牛云官方手册-<a href="https://developer.qiniu.com/kodo/manual/1233/console-quickstart" target="_blank" rel="noopener">快速入门</a></p>
+</blockquote>
+<ol start="2">
+<li>第二步：yii2 环境下composer下载七牛云sdk，配置七牛云的相关文件。</li>
+</ol>
+<ul>
+<li><p>composer下载七牛云sdk后，在vendor文件夹下位置位置。</p>
+<p><img src="https://i.loli.net/2019/03/19/5c8fc1462f553.png" alt></p>
+</li>
+<li><p>配置相关参数</p>
+<ul>
+<li><p>配置在自己的controller（或者model）文件里</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ak sk 存在于 个人中心&gt;密钥管理中</span></span><br><span class="line">    <span class="keyword">const</span> AK = <span class="string">'你的7牛 ak'</span>;</span><br><span class="line">    <span class="keyword">const</span> SK = <span class="string">'你的7牛 sk'</span>;</span><br><span class="line"><span class="comment">// domain bucket 存在左侧控制台 队形存储中</span></span><br><span class="line">    <span class="keyword">const</span> DOMAIN = <span class="string">'域名（七牛云有默认三十天过期的测试域名）'</span>;</span><br><span class="line">    <span class="keyword">const</span> BUCKET = <span class="string">'创建存储空间是设置的空间名称'</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置在Qiniu.php中</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> $up_host = <span class="string">'http://up-z0.qiniu.com'</span>;   <span class="comment">//默认上传的地址</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>第三步：在文件中使用七牛云作为图片服务器，上传以及下载。</li>
+</ol>
 
       
 
@@ -195,6 +236,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -245,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/24/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/18/yii2-使用七牛云上传图片/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -259,15 +311,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/13/工作中常用git命令/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/25/LOL-欢喜/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          工作中常用git命令
+          LOL-欢喜
         
       </div>
     </a>
   
+  
+    <a href="/2019/03/13/工作中常用git命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">工作中常用git命令</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -397,6 +454,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">中二</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">LOL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">start</a>
               </li>
             
             <div class="clearfix"></div>
