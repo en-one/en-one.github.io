@@ -7,25 +7,29 @@ tags:
 
 ---
 
-> 使用php在后台查询数据，然后通过接口将数据·以文件的格式通过浏览器下载。
+> 使用php在后台查询数据，然后通过接口将数据以文件的格式通过浏览器下载。
 > <!--more-->
 
 1.代码
 ```php
-     //处理文件名
-     $ua = $_SERVER["HTTP_USER_AGENT"];  
-     $filename = "中文文件名.txt";  
-     $encoded_filename = urlencode($filename);  
-     $encoded_filename = str_replace("+", "%20", $encoded_filename); 
-	 //header头设置
-     header("Content-Type: application/octet-stream");    
-     if (preg_match("/MSIE/", $_SERVER['HTTP_USER_AGENT']) {
-       header('Content-Disposition:  attachment; filename="' .$encoded_filename . '"');    
-     } else if (preg_match("/Firefox/",$_SERVER['HTTP_USER_AGENT']))    { 
-     header('Content-Disposition: attachment;filename*="utf8' .  $filename . '"');    
-     } else {    
-    header('Content-Disposition: attachment; filename="' .  $filename . '"');    
-     }
+    //下载内容
+    $ua = $_SERVER["HTTP_USER_AGENT"];
+
+    //处理文件名
+    $filename = "中文文件名.txt";  
+    $encoded_filename = urlencode($filename);  
+    $encoded_filename = str_replace("+", "%20", $encoded_filename);
+
+    //header头设置
+    header("Content-Type: application/octet-stream");
+    if (preg_match("/MSIE/", $_SERVER['HTTP_USER_AGENT']) ) {
+        header('Content-Disposition:  attachment; filename="' . $encoded_filename . '"');
+    } elseif (preg_match("/Firefox/", $_SERVER['HTTP_USER_AGENT'])) {
+        header('Content-Disposition: attachment; filename*="' .  $filename . '"');
+    } else {
+        header('Content-Disposition: attachment; filename="' .  $filename . '"');
+    }
+
      //输出函数到下载的文件中
      echo $ur;
 ```
