@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>php实现数据以txt文件通过浏览器下载 | 小鱼儿要游去哪里</title>
+  <title>php 在chrome下使用https导出execl文件错误 | 小鱼儿要游去哪里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用php在后台查询数据，然后通过接口将数据以文件的格式通过浏览器下载。">
-<meta name="keywords" content="PHP,数据下载">
+  <meta name="description" content="周一，一个天气晴朗的日子，然而线上产品却出了问题……">
+<meta name="keywords" content="php,https,chrome">
 <meta property="og:type" content="article">
-<meta property="og:title" content="php实现数据以txt文件通过浏览器下载">
-<meta property="og:url" content="http://yoursite.com/2019/04/20/php实现数据以txt文件通过浏览器下载/index.html">
+<meta property="og:title" content="php 在chrome下使用https导出execl文件错误">
+<meta property="og:url" content="http://yoursite.com/2019/05/20/php-在chrome下使用https导出execl文件错误/index.html">
 <meta property="og:site_name" content="小鱼儿要游去哪里">
-<meta property="og:description" content="使用php在后台查询数据，然后通过接口将数据以文件的格式通过浏览器下载。">
+<meta property="og:description" content="周一，一个天气晴朗的日子，然而线上产品却出了问题……">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-03T06:53:03.448Z">
+<meta property="og:image" content="https://i.loli.net/2019/05/23/5ce6810f0aa0954726.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/05/23/5ce680e6b0d0f25429.png">
+<meta property="og:updated_time" content="2019-05-23T11:27:33.869Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="php实现数据以txt文件通过浏览器下载">
-<meta name="twitter:description" content="使用php在后台查询数据，然后通过接口将数据以文件的格式通过浏览器下载。">
+<meta name="twitter:title" content="php 在chrome下使用https导出execl文件错误">
+<meta name="twitter:description" content="周一，一个天气晴朗的日子，然而线上产品却出了问题……">
+<meta name="twitter:image" content="https://i.loli.net/2019/05/23/5ce6810f0aa0954726.jpg">
   
     <link rel="alternative" href="/atom.xml" title="小鱼儿要游去哪里" type="application/atom+xml">
   
@@ -147,20 +150,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-php实现数据以txt文件通过浏览器下载" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-php-在chrome下使用https导出execl文件错误" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      php实现数据以txt文件通过浏览器下载
+      php 在chrome下使用https导出execl文件错误
     </h1>
   
 
         
-        <a href="/2019/04/20/php实现数据以txt文件通过浏览器下载/" class="archive-article-date">
-  	<time datetime="2019-04-20T10:20:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-20</time>
+        <a href="/2019/05/20/php-在chrome下使用https导出execl文件错误/" class="archive-article-date">
+  	<time datetime="2019-05-20T11:57:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
 </a>
         
       </header>
@@ -168,26 +171,36 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>使用php在后台查询数据，然后通过接口将数据以文件的格式通过浏览器下载。<br><a id="more"></a></p>
+<p>周一，一个天气晴朗的日子，然而线上产品却出了问题……</p>
+<a id="more"></a>
 </blockquote>
-<p>1.代码<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//下载内容</span></span><br><span class="line">$ua = $_SERVER[<span class="string">"HTTP_USER_AGENT"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//处理文件名</span></span><br><span class="line">$filename = <span class="string">"中文文件名.txt"</span>;  </span><br><span class="line">$encoded_filename = urlencode($filename);  </span><br><span class="line">$encoded_filename = str_replace(<span class="string">"+"</span>, <span class="string">"%20"</span>, $encoded_filename);</span><br><span class="line"></span><br><span class="line"><span class="comment">//header头设置</span></span><br><span class="line">header(<span class="string">"Content-Type: application/octet-stream"</span>);</span><br><span class="line"><span class="keyword">if</span> (preg_match(<span class="string">"/MSIE/"</span>, $_SERVER[<span class="string">'HTTP_USER_AGENT'</span>]) ) &#123;</span><br><span class="line">    header(<span class="string">'Content-Disposition:  attachment; filename="'</span> . $encoded_filename . <span class="string">'"'</span>);</span><br><span class="line">&#125; <span class="keyword">elseif</span> (preg_match(<span class="string">"/Firefox/"</span>, $_SERVER[<span class="string">'HTTP_USER_AGENT'</span>])) &#123;</span><br><span class="line">    header(<span class="string">'Content-Disposition: attachment; filename*="'</span> .  $filename . <span class="string">'"'</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    header(<span class="string">'Content-Disposition: attachment; filename="'</span> .  $filename . <span class="string">'"'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//输出函数到下载的文件中</span></span><br><span class="line"> <span class="keyword">echo</span> $ur;</span><br></pre></td></tr></table></figure></p>
-<p>2.相关内容</p>
+<h1 id="PhpExecl-导出报错"><a href="#PhpExecl-导出报错" class="headerlink" title="PhpExecl 导出报错"></a>PhpExecl 导出报错</h1><p>正常操作：项目具有将数据库中信息以<strong>execl</strong>格式下载，是借助<strong>Phpexecl</strong>类 进行数据导出</p>
+<p>问题描述：</p>
+<ol>
+<li>本地http情况下正常</li>
+<li>测试环境以及正式环境https下报错（如图）</li>
+<li>chrome浏览器下报错，firefox正常</li>
+</ol>
+<p><a href="https://i.loli.net/2019/05/23/5ce6810f0aa0954726.jpg" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/05/23/5ce6810f0aa0954726.jpg" alt="微信图片_20190523190156.png"></a></p>
+<p>解决方法：</p>
+<ol>
+<li>在PhpExecl类中的export函数中找到了header函数，删掉了函数中字符串中的空格</li>
+</ol>
+<p><img src="https://i.loli.net/2019/05/23/5ce680e6b0d0f25429.png" alt></p>
+<ol start="2">
+<li>成功</li>
+</ol>
+<p>问题解决过程：</p>
+<ol>
+<li>自我解决：以前由于对导出信息中的<strong>**特殊字符串</strong>处理问题爆出过错误，打算以此入手</li>
+<li>前辈提示：由于生产环境问题比较紧急，问了前辈，提出怀疑是<strong>header函数中是否有空格</strong>导致错误</li>
+<li>找到对应函数，删掉其中的空格，成功</li>
+<li>在网上搜索了相关原理</li>
+</ol>
 <blockquote>
-<p><em>php header()函数</em></p>
+<p>大致情况是，header函数中的空格，被解析为%20，导致header函数无效，详细解释可以看下面链接</p>
 </blockquote>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Content-type:application/octet-stream"</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>只能提交二进制，而且只能提交一个二进制，如果提交文件的话，只能提交一个文件,后台接收参数只能有一个，而且只能是流（或者字节数组）</p>
-</blockquote>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">header(<span class="string">'Content-Disposition: attachment;filename*="utf8'</span> .  $filename . <span class="string">'"'</span>);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>当你在响应类型为application/octet- stream情况下使用了这个头信息的话，那就意味着你不想直接显示内容，而是弹出一个”文件下载”的对话框，接下来就是由你来决定”打开”还是”保存” 了</p>
-</blockquote>
-<p>参考文章：</p>
-<ul>
-<li><a href="https://blog.csdn.net/oQiWei1/article/details/62432315" target="_blank" rel="noopener">https://blog.csdn.net/oQiWei1/article/details/62432315</a></li>
-<li><a href="https://blog.csdn.net/lxc939134342/article/details/50291349" target="_blank" rel="noopener">https://blog.csdn.net/lxc939134342/article/details/50291349</a></li>
-</ul>
+<p>深入研究：<a href="https://blog.csdn.net/qq_37118034/article/details/81945960" target="_blank" rel="noopener">https://blog.csdn.net/qq_37118034/article/details/81945960</a></p>
 
       
 
@@ -222,11 +235,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">PHP</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据下载</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">https</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">chrome</a>
         		</li>
       		
 		</ul>
@@ -282,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/20/php实现数据以txt文件通过浏览器下载/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/20/php-在chrome下使用https导出execl文件错误/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -296,18 +313,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/03/yii2-的nginx配置/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          yii2 的nginx配置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/14/Go-基本数据/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Go-基本数据</div>
+    <a href="/2019/05/03/yii2-的nginx配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">yii2 的nginx配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -334,7 +342,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PhpExecl-导出报错"><span class="toc-number">1.</span> <span class="toc-text">PhpExecl 导出报错</span></a></li></ol>
                     </div>
                 </span>
             </div>
