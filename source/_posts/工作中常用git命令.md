@@ -47,8 +47,8 @@ git push -u origin master
 ```git
     git branch dev3.3.3     创建分支(本地)
     git branch -r           查看分支（r代表查看远程仓库分支）
-    git fetch origin dev3.3.3(远程分支名):dev3.3.3(本地分支名)  远程分支拉取到本地，并创建本地分支
-    git branch --set-upstream-to=origin/dev3.3.3(远程分支名)  dev3.3.3(本地分支名)
+    ①git fetch origin dev3.3.3(远程分支名):dev3.3.3(本地分支名)  远程分支拉取到本地，并创建本地分支
+    ②git push --set-upstream-to=origin dev3.3.3 (本地当前分支为dev3.3.3)
     git checkout dev3.3.3    切换分支 
     git branch -d dev3.3.3    删除分支
 ```
