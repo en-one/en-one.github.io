@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: https | 小鱼儿要游去哪里</title>
+  <title>6.2-本周知识点 | 小鱼儿要游去哪里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小鱼儿要游去哪里">
-<meta property="og:url" content="http://yoursite.com/tags/https/index.html">
+  <meta name="description" content="一周工作中遇到的零碎知识点">
+<meta name="keywords" content="Php,零碎知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="6.2-本周知识点">
+<meta property="og:url" content="http://yoursite.com/2019/06/02/5-27-本周知识点/index.html">
 <meta property="og:site_name" content="小鱼儿要游去哪里">
+<meta property="og:description" content="一周工作中遇到的零碎知识点">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2019/06/02/5cf3b6274316b86527.png">
+<meta property="og:updated_time" content="2019-06-02T12:00:23.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小鱼儿要游去哪里">
+<meta name="twitter:title" content="6.2-本周知识点">
+<meta name="twitter:description" content="一周工作中遇到的零碎知识点">
+<meta name="twitter:image" content="https://i.loli.net/2019/06/02/5cf3b6274316b86527.png">
   
     <link rel="alternative" href="/atom.xml" title="小鱼儿要游去哪里" type="application/atom+xml">
   
@@ -142,68 +149,236 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-5-27-本周知识点" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/20/php-在chrome下使用https导出execl文件错误/" class="archive-article-date">
-  	<time datetime="2019-05-20T11:57:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/20/php-在chrome下使用https导出execl文件错误/">php 在chrome下使用https导出execl文件错误</a>
+    <h1 class="article-title" itemprop="name">
+      6.2-本周知识点
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/06/02/5-27-本周知识点/" class="archive-article-date">
+  	<time datetime="2019-06-02T08:36:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>一周工作中遇到的零碎知识点</p>
+<a id="more"></a>
+</blockquote>
+<h3 id="1-php-json-decode-对中文进行转义"><a href="#1-php-json-decode-对中文进行转义" class="headerlink" title="1. php json_decode 对中文进行转义"></a>1. php json_decode 对中文进行转义</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> json_encode(<span class="string">"中文"</span>);    <span class="comment">// \u4e2d\u6587\u00a</span></span><br><span class="line"><span class="keyword">echo</span> json_encode(<span class="string">"中文"</span>, JSON_UNESCAPED_UNICODE); <span class="comment">// 中文</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-解决phpExecl中-超过十二位的数字字符串（例如身份证号）无法正常显示（以科学计数法显示）"><a href="#2-解决phpExecl中-超过十二位的数字字符串（例如身份证号）无法正常显示（以科学计数法显示）" class="headerlink" title="2. 解决phpExecl中 超过十二位的数字字符串（例如身份证号）无法正常显示（以科学计数法显示）"></a>2. 解决phpExecl中 超过十二位的数字字符串（例如身份证号）无法正常显示（以科学计数法显示）</h3><p><a href="https://i.loli.net/2019/06/02/5cf3b6274316b86527.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/06/02/5cf3b6274316b86527.png" alt="sp20190602_194013_850.png"></a></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//长数字字符串以科学计数法显示</span></span><br><span class="line">$objectPHPExcel-&gt;getActiveSheet()-&gt;setCellValue($v . ($index + <span class="number">4</span>), $text);  </span><br><span class="line"><span class="comment">// 通过添加空格方式 以文本格式显示</span></span><br><span class="line">$objectPHPExcel-&gt;getActiveSheet()-&gt;setCellValue($v . ($index + <span class="number">4</span>), $text.<span class="string">"\t"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="3-身份证-的正则匹配"><a href="#3-身份证-的正则匹配" class="headerlink" title="3. 身份证 的正则匹配"></a>3. 身份证 的正则匹配</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">preg_match(<span class="string">'/^[1-9]\d&#123;5&#125;(18|19|20)\d&#123;2&#125;((0[1-9])|(1[0-2]))(([0-2][1-9])|10|20|30|31)\d&#123;3&#125;[0-9Xx]$/'</span>, $text)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3.1 地址码规则——– /^[1-9]\d{5}/</p>
+<ul>
+<li>地址码长6位</li>
+<li>以数字1-9开头</li>
+<li>后5位为0-9的数字</li>
+</ul>
+<p>3.2 年份码规则——– /(18|19|20)\d{2}/</p>
+<ul>
+<li>年份码长4位</li>
+<li>以数字18，19或20开头</li>
+<li>剩余两位为0-9的数字</li>
+</ul>
+<p>3.3 月份码规则——– /((0[1-9])|(1[0-2]))/</p>
+<ul>
+<li><p>月份码长2位</p>
+</li>
+<li><p>第一位数字为0，第二位数字为1-9</p>
+</li>
+<li><p>或者第一位数字为1，第二位数字为0-2</p>
+</li>
+</ul>
+<p>3.4 日期码规则——–/(([0-2][1-9])|10|20|30|31)/</p>
+<ul>
+<li>日期码长2位</li>
+<li>第一位数字为0-2，第二位数字为1-9</li>
+<li>或者是10，20，30，31</li>
+</ul>
+<p>3.5  顺序码规则——–/\d{3}/</p>
+<ul>
+<li>顺序码长3位</li>
+<li>顺序码是数字</li>
+</ul>
+<p>3.6 校验码规则——– /[0-9Xx]/</p>
+<ul>
+<li>校验码长1位</li>
+<li>可以是数字，字母x或字母X</li>
+</ul>
+</blockquote>
+<h3 id="4-mysql-中的when语句"><a href="#4-mysql-中的when语句" class="headerlink" title="4. mysql 中的when语句"></a>4. mysql 中的when语句</h3> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CASE WHEN (type = 1 AND status = 1) THEN 1 ELSE 0 END</span><br></pre></td></tr></table></figure>
+<h3 id="5-mysql-中的-IFNULL-函数"><a href="#5-mysql-中的-IFNULL-函数" class="headerlink" title="5.  mysql 中的 IFNULL() 函数"></a>5.  mysql 中的 IFNULL() 函数</h3><blockquote>
+<p>LeetCode–197 </p>
+<p>​    返回第二高的薪水。如果不存在第二高的薪水，那么查询应返回 <code>null</code>。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--IFNULL() 函数用于判断第一个表达式是否为 NULL，如果为 NULL 则返回第二个参数的值，如果不为 NULL 则返回第一个参数的值--&gt;</span><br><span class="line">SELECT</span><br><span class="line">   IFNULL(</span><br><span class="line">     (SELECT DISTINCT Salary</span><br><span class="line">      FROM Employee</span><br><span class="line">      ORDER BY Salary DESC</span><br><span class="line">       LIMIT 1 OFFSET 1),</span><br><span class="line">   NULL) AS SecondHighestSalary</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Php</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">https</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">chrome</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">零碎知识点</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/02/5-27-本周知识点/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/05/20/php-在chrome下使用https导出execl文件错误/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php 在chrome下使用https导出execl文件错误</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-php-json-decode-对中文进行转义"><span class="toc-number">1.</span> <span class="toc-text">1. php json_decode 对中文进行转义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-解决phpExecl中-超过十二位的数字字符串（例如身份证号）无法正常显示（以科学计数法显示）"><span class="toc-number">2.</span> <span class="toc-text">2. 解决phpExecl中 超过十二位的数字字符串（例如身份证号）无法正常显示（以科学计数法显示）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-身份证-的正则匹配"><span class="toc-number">3.</span> <span class="toc-text">3. 身份证 的正则匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-mysql-中的when语句"><span class="toc-number">4.</span> <span class="toc-text">4. mysql 中的when语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-mysql-中的-IFNULL-函数"><span class="toc-number">5.</span> <span class="toc-text">5.  mysql 中的 IFNULL() 函数</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -226,9 +401,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
