@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>yii2 的nginx配置 | 小鱼儿要游去哪里</title>
+  <title>小鱼儿要游去哪里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mysite.conf 中一些注释">
-<meta name="keywords" content="nginx">
-<meta property="og:type" content="article">
-<meta property="og:title" content="yii2 的nginx配置">
-<meta property="og:url" content="http://yoursite.com/2019/05/03/yii2-的nginx配置/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="小鱼儿要游去哪里">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="小鱼儿要游去哪里">
-<meta property="og:description" content="mysite.conf 中一些注释">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-05T10:36:47.957Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yii2 的nginx配置">
-<meta name="twitter:description" content="mysite.conf 中一些注释">
+<meta name="twitter:title" content="小鱼儿要游去哪里">
   
     <link rel="alternative" href="/atom.xml" title="小鱼儿要游去哪里" type="application/atom+xml">
   
@@ -147,96 +142,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-yii2-的nginx配置" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      yii2 的nginx配置
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/13/hello-world/">做一条努力的鱼</a>
     </h1>
   
 
         
-        <a href="/2019/05/03/yii2-的nginx配置/" class="archive-article-date">
-  	<time datetime="2019-05-03T08:33:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-03</time>
+        <a href="/2019/02/13/hello-world/" class="archive-article-date">
+  	<time datetime="2019-02-13T11:06:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>mysite.conf 中一些注释<br><a id="more"></a></p>
-</blockquote>
-<p>工作中使用的基于yii2的封装框架，下面是相应的nginx虚拟主机配置。</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">charset</span> utf-<span class="number">8</span>;</span><br><span class="line">    <span class="comment">## 上传大文件的容量（默认时1M）</span></span><br><span class="line">    <span class="attribute">client_max_body_size</span> <span class="number">128M</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">## 监听端口</span></span><br><span class="line">    <span class="attribute">listen</span> <span class="number">80</span>; </span><br><span class="line">    <span class="comment">## 域名可以有多个，用空格分开</span></span><br><span class="line">    <span class="attribute">server_name</span> mysite.test mysite2.test;</span><br><span class="line">    <span class="comment">## root 指向项目根目录</span></span><br><span class="line">    <span class="attribute">root</span>        /path/to/basic/web;</span><br><span class="line">    <span class="comment">## index 根目录下第一个解析的文件</span></span><br><span class="line">    <span class="attribute">index</span>       index.php;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># rewrite重写功能，try_files按其后面的参数顺序检查文件是否存在，返回第一个找到的文件</span></span><br><span class="line">     <span class="attribute">location</span> / &#123;</span><br><span class="line">         <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.php<span class="variable">$is_args</span><span class="variable">$args</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="comment">## nginx 禁止访问.svn .git目录③</span></span><br><span class="line">      <span class="attribute">location</span> <span class="regexp">~* /\.(ht|svn|git)</span> &#123;</span><br><span class="line">          <span class="attribute">deny</span> all;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="attribute">location</span> <span class="regexp">~ .*\.php?$</span> &#123;</span><br><span class="line">          <span class="attribute">fastcgi_pass</span>  unix:/tmp/php-cgi.sock; <span class="comment">## 监听端口①</span></span><br><span class="line">          <span class="attribute">fastcgi_index</span> index.php;</span><br><span class="line">          <span class="attribute">include</span> fastcgi.conf;</span><br><span class="line"> </span><br><span class="line">          <span class="attribute">limit_req</span> zone=one burst=<span class="number">2</span> nodelay; <span class="comment">## 限流④</span></span><br><span class="line">          <span class="attribute">limit_conn</span> addr <span class="number">2</span>;</span><br><span class="line">        </span><br><span class="line">          <span class="comment">##  access_log 项目的接口访问日志</span></span><br><span class="line">    	  <span class="comment">##  error_log 错误日志</span></span><br><span class="line">          <span class="attribute">error_log</span>   /path/to/basic/log/error.log;</span><br><span class="line">          <span class="attribute">access_log</span>  /data/web_logs/meet.log realip;</span><br><span class="line">        </span><br><span class="line">          <span class="comment"># Project params②</span></span><br><span class="line">          <span class="attribute">fastcgi_param</span> ENV_MOD DEVELOPMENT; <span class="comment"># 开发环境</span></span><br><span class="line">          <span class="comment">#fastcgi_param ENV_MOD TEST; # 测试环境</span></span><br><span class="line">          <span class="comment">#fastcgi_param ENV_MOD PRODUCTION; # 生产环境</span></span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>① Nginx 连接fastcgi的方式有两种：</p>
-<ul>
-<li>TCP是使用TCP端口连接127.0.0.1:9000</li>
-<li><p>Socket是使用unix domain socket连接套接字/dev/shm/php-cgi.sock（很多教程使用路径/tmp，而路径/dev/shm是个tmpfs，速度比磁盘快得多）</p>
-<blockquote>
-<p>fastcgi_pass  unix:/tmp/php-cgi.sock<br>fastcgi_pass  127.0.0.1:9000</p>
-</blockquote>
-<p>在服务器压力不大的情况下，tcp和socket差别不大，但在压力比较满的时候，用套接字方式，效果确实比较好。 </p>
-</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>②  Nginx 设置环境变量</p>
-<ul>
-<li>在nginx的总体配置文件nginx.cong中</li>
-<li>在项目单独的nginx配置文件mysite.conf中</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>③ deny 命令</p>
-<ul>
-<li>deny 表示不允许进行访问, 若不符合deny条件 ，则执行下一条指令</li>
-<li>从上到下执行，匹配到了便跳出</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>④限流</p>
-<ul>
-<li>zone=one ：设置使用哪个配置区域来做限制</li>
-<li>burst=2：(burst 爆发)，设置一个大小为2的缓冲区，担当有大量请求爆发的时候，超过了<code>访问频次</code>限制的请求，放在缓冲区，等待请求超过缓冲区大小，报503错误</li>
-<li><p>nodelay：</p>
-<ul>
-<li>若设置，会在瞬时提供处理（burst+rate）(rate单位r/s)个请求的能力，超过这个速度503错误，不会有请求等待的情况</li>
-<li>未设置，所有请求依次排队等待</li>
-</ul>
-</li>
-<li><p>limit_conn addr 2： 指定addr这个地址只能同时存在两个链接</p>
-</li>
-</ul>
-</blockquote>
+        <ol>
+<li>记录自己的一些日常中使用的知识点，便于知识点的复习。</li>
+<li>对学习并且使用的知识点进行梳理。</li>
+<li>记录一些中二的东西。</li>
+</ol>
+<p><img src="https://i.loli.net/2019/03/13/5c88bfd1c3605.jpg" alt="5c88bfd1c3605"></p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -247,7 +183,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">start</a>
         		</li>
       		
 		</ul>
@@ -256,84 +192,16 @@
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/13/hello-world/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/03/yii2-的nginx配置/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/05/20/php-在chrome下使用https导出execl文件错误/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          php 在chrome下使用https导出execl文件错误
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/04/20/php实现数据以txt文件通过浏览器下载/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">php实现数据以txt文件通过浏览器下载</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -348,32 +216,17 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    目录，不存在的…
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
 
 
-  
-  
-  
 
   
-
   
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -396,8 +249,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>yii2 的nginx配置 | 小鱼儿要游去哪里</title>
+  <title>（补）6月份知识点 | 小鱼儿要游去哪里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mysite.conf 中一些注释">
-<meta name="keywords" content="nginx">
+  <meta name="description" content="6月份总结的几个小知识点">
+<meta name="keywords" content="Php,零碎知识点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yii2 的nginx配置">
-<meta property="og:url" content="http://yoursite.com/2019/05/03/yii2-的nginx配置/index.html">
+<meta property="og:title" content="（补）6月份知识点">
+<meta property="og:url" content="http://yoursite.com/2019/07/08/6-9-本周知识点/index.html">
 <meta property="og:site_name" content="小鱼儿要游去哪里">
-<meta property="og:description" content="mysite.conf 中一些注释">
+<meta property="og:description" content="6月份总结的几个小知识点">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-05T10:36:47.957Z">
+<meta property="og:updated_time" content="2019-07-11T10:57:22.473Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yii2 的nginx配置">
-<meta name="twitter:description" content="mysite.conf 中一些注释">
+<meta name="twitter:title" content="（补）6月份知识点">
+<meta name="twitter:description" content="6月份总结的几个小知识点">
   
     <link rel="alternative" href="/atom.xml" title="小鱼儿要游去哪里" type="application/atom+xml">
   
@@ -147,20 +147,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-yii2-的nginx配置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-6-9-本周知识点" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      yii2 的nginx配置
+      （补）6月份知识点
     </h1>
   
 
         
-        <a href="/2019/05/03/yii2-的nginx配置/" class="archive-article-date">
-  	<time datetime="2019-05-03T08:33:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-03</time>
+        <a href="/2019/07/08/6-9-本周知识点/" class="archive-article-date">
+  	<time datetime="2019-07-08T14:43:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
 </a>
         
       </header>
@@ -168,49 +168,48 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>mysite.conf 中一些注释<br><a id="more"></a></p>
+<p>6月份总结的几个小知识点</p>
+<a id="more"></a>
 </blockquote>
-<p>工作中使用的基于yii2的封装框架，下面是相应的nginx虚拟主机配置。</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">charset</span> utf-<span class="number">8</span>;</span><br><span class="line">    <span class="comment">## 上传大文件的容量（默认时1M）</span></span><br><span class="line">    <span class="attribute">client_max_body_size</span> <span class="number">128M</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">## 监听端口</span></span><br><span class="line">    <span class="attribute">listen</span> <span class="number">80</span>; </span><br><span class="line">    <span class="comment">## 域名可以有多个，用空格分开</span></span><br><span class="line">    <span class="attribute">server_name</span> mysite.test mysite2.test;</span><br><span class="line">    <span class="comment">## root 指向项目根目录</span></span><br><span class="line">    <span class="attribute">root</span>        /path/to/basic/web;</span><br><span class="line">    <span class="comment">## index 根目录下第一个解析的文件</span></span><br><span class="line">    <span class="attribute">index</span>       index.php;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># rewrite重写功能，try_files按其后面的参数顺序检查文件是否存在，返回第一个找到的文件</span></span><br><span class="line">     <span class="attribute">location</span> / &#123;</span><br><span class="line">         <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.php<span class="variable">$is_args</span><span class="variable">$args</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="comment">## nginx 禁止访问.svn .git目录③</span></span><br><span class="line">      <span class="attribute">location</span> <span class="regexp">~* /\.(ht|svn|git)</span> &#123;</span><br><span class="line">          <span class="attribute">deny</span> all;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="attribute">location</span> <span class="regexp">~ .*\.php?$</span> &#123;</span><br><span class="line">          <span class="attribute">fastcgi_pass</span>  unix:/tmp/php-cgi.sock; <span class="comment">## 监听端口①</span></span><br><span class="line">          <span class="attribute">fastcgi_index</span> index.php;</span><br><span class="line">          <span class="attribute">include</span> fastcgi.conf;</span><br><span class="line"> </span><br><span class="line">          <span class="attribute">limit_req</span> zone=one burst=<span class="number">2</span> nodelay; <span class="comment">## 限流④</span></span><br><span class="line">          <span class="attribute">limit_conn</span> addr <span class="number">2</span>;</span><br><span class="line">        </span><br><span class="line">          <span class="comment">##  access_log 项目的接口访问日志</span></span><br><span class="line">    	  <span class="comment">##  error_log 错误日志</span></span><br><span class="line">          <span class="attribute">error_log</span>   /path/to/basic/log/error.log;</span><br><span class="line">          <span class="attribute">access_log</span>  /data/web_logs/meet.log realip;</span><br><span class="line">        </span><br><span class="line">          <span class="comment"># Project params②</span></span><br><span class="line">          <span class="attribute">fastcgi_param</span> ENV_MOD DEVELOPMENT; <span class="comment"># 开发环境</span></span><br><span class="line">          <span class="comment">#fastcgi_param ENV_MOD TEST; # 测试环境</span></span><br><span class="line">          <span class="comment">#fastcgi_param ENV_MOD PRODUCTION; # 生产环境</span></span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>① Nginx 连接fastcgi的方式有两种：</p>
+<h3 id="1-mysql-case-when-语句使用"><a href="#1-mysql-case-when-语句使用" class="headerlink" title="1. mysql case when 语句使用"></a>1. mysql case when 语句使用</h3><p>在本月遇到项目中某需求需要按照FStatus排序，而排序顺序与FStatus在数据库中存储顺序并不相同，采用了case-when进行排序</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 直接对FStatus进行排序</span></span><br><span class="line"> <span class="keyword">SELECT</span> FActid,FStatus,FCreateTime,FUpdateTime <span class="keyword">FROM</span> <span class="string">`meet_user`</span> <span class="keyword">WHERE</span> FUnionid =<span class="string">'oeoNytxUjV1xxxxxxxxxxxx'</span> </span><br><span class="line"> <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">case</span> FStatus </span><br><span class="line">   <span class="keyword">when</span> <span class="string">'4'</span> <span class="keyword">then</span> <span class="string">'4'</span></span><br><span class="line">   <span class="keyword">when</span> <span class="string">'3'</span> <span class="keyword">then</span> <span class="string">'1'</span></span><br><span class="line">   <span class="keyword">when</span> <span class="string">'2'</span> <span class="keyword">then</span> <span class="string">'2'</span></span><br><span class="line">   <span class="keyword">when</span> <span class="string">'1'</span> <span class="keyword">then</span> <span class="string">'3'</span></span><br><span class="line">   <span class="keyword">end</span> <span class="keyword">desc</span>,FUpdateTime <span class="keyword">DESC</span>;</span><br><span class="line">   </span><br><span class="line"><span class="comment">--    将FStatus的数据进行整理后排序</span></span><br><span class="line">   <span class="keyword">SELECT</span> FActid,FStatus,FCreateTime,FUpdateTime,</span><br><span class="line">       (<span class="keyword">case</span> FStatus <span class="keyword">when</span> <span class="string">'4'</span> <span class="keyword">then</span> <span class="string">'4'</span></span><br><span class="line">   <span class="keyword">when</span> <span class="string">'3'</span> <span class="keyword">then</span> <span class="string">'1'</span></span><br><span class="line">   <span class="keyword">when</span> <span class="string">'2'</span> <span class="keyword">then</span> <span class="string">'2'</span></span><br><span class="line">   <span class="keyword">when</span> <span class="string">'1'</span> <span class="keyword">then</span> <span class="string">'3'</span> <span class="keyword">END</span>) <span class="keyword">AS</span> FOrder</span><br><span class="line">       <span class="keyword">FROM</span> <span class="string">`meet_user`</span> <span class="keyword">WHERE</span> FUnionid =<span class="string">'oeoNytxUjV1xxxxxxxxxxxx'</span> </span><br><span class="line">       <span class="keyword">ORDER</span> <span class="keyword">BY</span> FOrder <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-php-取整函，转载于http-blog-csdn-net-churk2012-article-details-51424588"><a href="#2-php-取整函，转载于http-blog-csdn-net-churk2012-article-details-51424588" class="headerlink" title="2. php 取整函，转载于http://blog.csdn.net/churk2012/article/details/51424588"></a>2. php 取整函，转载于<a href="http://blog.csdn.net/churk2012/article/details/51424588" target="_blank" rel="noopener">http://blog.csdn.net/churk2012/article/details/51424588</a></h3><blockquote>
 <ul>
-<li>TCP是使用TCP端口连接127.0.0.1:9000</li>
-<li><p>Socket是使用unix domain socket连接套接字/dev/shm/php-cgi.sock（很多教程使用路径/tmp，而路径/dev/shm是个tmpfs，速度比磁盘快得多）</p>
-<blockquote>
-<p>fastcgi_pass  unix:/tmp/php-cgi.sock<br>fastcgi_pass  127.0.0.1:9000</p>
-</blockquote>
-<p>在服务器压力不大的情况下，tcp和socket差别不大，但在压力比较满的时候，用套接字方式，效果确实比较好。 </p>
+<li>intval转换成整型，如果是字符串转换为0<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">intval(<span class="number">3.14159</span>);  <span class="comment">// 3</span></span><br><span class="line">intval(<span class="number">3.64159</span>);  <span class="comment">// 3 </span></span><br><span class="line">intval(<span class="string">'ruesin'</span>); <span class="comment">//0</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
 <blockquote>
-<p>②  Nginx 设置环境变量</p>
 <ul>
-<li>在nginx的总体配置文件nginx.cong中</li>
-<li>在项目单独的nginx配置文件mysite.conf中</li>
+<li>round() 四舍五入<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">round(<span class="number">3.14159</span>);      <span class="comment">// 3</span></span><br><span class="line">round(<span class="number">3.64159</span>);      <span class="comment">// 4</span></span><br><span class="line">round(<span class="number">3.64159</span>, <span class="number">0</span>);   <span class="comment">// 4</span></span><br><span class="line">round(<span class="number">3.64159</span>, <span class="number">2</span>);   <span class="comment">// 3.64</span></span><br><span class="line">round(<span class="number">5.64159</span>, <span class="number">3</span>);   <span class="comment">// 3.642</span></span><br><span class="line">round(<span class="number">364159</span>, <span class="number">-2</span>);   <span class="comment">// 364200</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </blockquote>
 <blockquote>
-<p>③ deny 命令</p>
 <ul>
-<li>deny 表示不允许进行访问, 若不符合deny条件 ，则执行下一条指令</li>
-<li>从上到下执行，匹配到了便跳出</li>
+<li>ceil() 向上取整，有小数就加一<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ceil(<span class="number">3.14159</span>);  <span class="comment">// 4</span></span><br><span class="line">ceil(<span class="number">3.64159</span>);  <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </blockquote>
 <blockquote>
-<p>④限流</p>
 <ul>
-<li>zone=one ：设置使用哪个配置区域来做限制</li>
-<li>burst=2：(burst 爆发)，设置一个大小为2的缓冲区，担当有大量请求爆发的时候，超过了<code>访问频次</code>限制的请求，放在缓冲区，等待请求超过缓冲区大小，报503错误</li>
-<li><p>nodelay：</p>
-<ul>
-<li>若设置，会在瞬时提供处理（burst+rate）(rate单位r/s)个请求的能力，超过这个速度503错误，不会有请求等待的情况</li>
-<li>未设置，所有请求依次排队等待</li>
+<li>floor() 向下取整<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">floor(<span class="number">3.14159</span>);    <span class="comment">// 3</span></span><br><span class="line">floor(<span class="number">3.64159</span>);    <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-</li>
-<li><p>limit_conn addr 2： 指定addr这个地址只能同时存在两个链接</p>
-</li>
+</blockquote>
+<h3 id="3-php的-and-和-amp-amp"><a href="#3-php的-and-和-amp-amp" class="headerlink" title="3. php的 and 和 &amp;&amp;"></a>3. php的 and 和 &amp;&amp;</h3><pre><code class="php">
+<span class="keyword">if</span> ($a = <span class="string">'aa'</span> <span class="keyword">and</span> <span class="string">'bb'</span>) {
+    var_dump($a);
+}
+
+<span class="keyword">if</span> ($a = <span class="string">'aa'</span> &amp;&amp; <span class="string">'bb'</span>) {
+    var_dump($a);
+}
+</code></pre>
+<blockquote>
+<ul>
+<li>对于第一个if，因为=的优先级大于and，所以先去执行赋值语句（所以$a为字符串aa），再去执行and逻辑操作。</li>
+<li>对于第二个if，因为&amp;&amp;的优先级大于=，所以先去执行&amp;&amp;逻辑操作，得到true，然后再把true赋值给$a（所以$a为bool值true）。</li>
 </ul>
 </blockquote>
 
@@ -247,7 +246,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Php</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">零碎知识点</a>
         		</li>
       		
 		</ul>
@@ -303,7 +306,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/03/yii2-的nginx配置/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/08/6-9-本周知识点/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,18 +320,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/20/php-在chrome下使用https导出execl文件错误/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          php 在chrome下使用https导出execl文件错误
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/20/php实现数据以txt文件通过浏览器下载/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">php实现数据以txt文件通过浏览器下载</div>
+    <a href="/2019/06/02/5-27-本周知识点/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">6.2-本周知识点</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -355,7 +349,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-mysql-case-when-语句使用"><span class="toc-number">1.</span> <span class="toc-text">1. mysql case when 语句使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-php-取整函，转载于http-blog-csdn-net-churk2012-article-details-51424588"><span class="toc-number">2.</span> <span class="toc-text">2. php 取整函，转载于http://blog.csdn.net/churk2012/article/details/51424588</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-php的-and-和-amp-amp"><span class="toc-number">3.</span> <span class="toc-text">3. php的 and 和 &amp;&amp;</span></a></li></ol>
                     </div>
                 </span>
             </div>
