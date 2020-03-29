@@ -1,7 +1,10 @@
 ---
 title: win10 部署docker下nmp环境-遇见问题
 date: 2019-07-06 23:49:57
-tags: docker
+tags: 
+- docker
+- 资料
+
 ---
 > 记录本人在win10 环境下使用docker部署php开发环境遇到问题
 > 以下仅为本人所见所闻。

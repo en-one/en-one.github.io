@@ -1,7 +1,9 @@
 ---
 title: yii2 的nginx配置
 date: 2019-05-03 16:33:36
-tags: nginx
+tags: 
+- nginx
+- 知识点
 ---
 
 > mysite.conf 中一些注释

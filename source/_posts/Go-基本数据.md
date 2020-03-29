@@ -5,6 +5,7 @@ tags:
 - Go
 - 数据类型
 - 基本数据
+- 知识点
 
 ---
 > Go-基本数据：数字(number)、字符串(string)、和布尔型(boolean)

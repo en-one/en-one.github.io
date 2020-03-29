@@ -2,6 +2,7 @@
 title: nginx + php-fpm 运行原理
 date: 2019-07-28 23:33:04
 tags:
+- 知识点
 ---
 
 一、 nginx 是什么

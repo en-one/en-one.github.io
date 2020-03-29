@@ -1,9 +1,10 @@
 # Header
 
 menu:
-  主页: /
-  随笔: /tags/随笔/
+  总结: /tags/总结/
+  杂乱句子: /tags/随笔/
   资料: /tags/资料/
+  知识点: /tags/知识点/
 
 # SubNav
 subnav:
@@ -125,4 +126,4 @@ friends:
   友情链接2: http://localhost:4000/
   友情链接3: http://localhost:4000/
 
-aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
+aboutme: 张立雨<br>phper<br>浙江理工大学，计算机科学与技术<br>邮箱：xiaoyuer960303@gmail.com<br><br>虽然辛苦<br>希望我们仍然选择这滚烫的人生
