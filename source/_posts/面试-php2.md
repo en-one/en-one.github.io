@@ -2,6 +2,9 @@
 title: 面试-php2
 date: 2020-03-10 00:17:39
 tags:
+- 面试
+- 知识点
+- php
 ---
 1. redis与memcached的异同，使用场景，数据类型，优缺点
 2. 一次完整的http请求的过程，这个nginx是怎么处理的，php-fpm 是怎么处理的，怎么优化
