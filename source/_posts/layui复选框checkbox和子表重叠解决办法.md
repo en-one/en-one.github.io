@@ -31,3 +31,7 @@ tags:
 
 > 修改layui源码CSS中z-index=-1，如下：
 .layui-table-fixed { position: absolute; left: 0; top: 0; z-index: -1; }
+
+---
+
+- *借鉴文章* [链接](https://github.com/yelog/layui-soul-table/issues/33 )
