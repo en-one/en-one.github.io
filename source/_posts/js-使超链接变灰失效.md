@@ -35,5 +35,8 @@ window.onload = function getGrey() {
 4.遇到问题
 
 > 频繁以及快速刷新造成edit_object不能找到对应变量，添加一个两秒的定时器再度调用
+
+5.注意
+> 对应按钮修改css后，记得修改对应接口
     
 
