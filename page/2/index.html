@@ -156,6 +156,504 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-使用篇-php" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/使用篇-php/">使用篇-php</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/使用篇-php/" class="archive-article-date">
+  	<time datetime="2020-06-09T08:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/使用篇-php/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-layui复选框checkbox和子表重叠解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/layui复选框checkbox和子表重叠解决办法/">layui复选框checkbox和子表重叠解决办法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/layui复选框checkbox和子表重叠解决办法/" class="archive-article-date">
+  	<time datetime="2020-06-09T06:53:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://s1.ax1x.com/2020/06/09/t51IgJ.png" alt="t51IgJ.png"></p>
+<p>代码如下:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cols: [[</span><br><span class="line">              &#123;type: <span class="string">'checkbox'</span>, fixed: <span class="string">'left'</span>&#125;</span><br><span class="line">              , &#123;field: <span class="string">'account'</span>, title: <span class="string">'学号'</span>&#125;</span><br><span class="line">              , &#123;field: <span class="string">'name'</span>, title: <span class="string">'姓名'</span>&#125;</span><br><span class="line">              , &#123;field: <span class="string">'mobile'</span>, title: <span class="string">'手机号'</span>&#125;</span><br><span class="line">              , &#123;field: <span class="string">'grade_name'</span>, title: <span class="string">'年级'</span>&#125;</span><br><span class="line">          ]]</span><br><span class="line">          ,</span><br></pre></td></tr></table></figure>
+<p>解决方法:</p>
+<blockquote>
+<p>去掉fix字段, 如下：<br>{type: ‘checkbox’} </p>
+</blockquote>
+<blockquote>
+<p>修改layui源码CSS中z-index=-1，如下：<br>.layui-table-fixed { position: absolute; left: 0; top: 0; z-index: -1; }</p>
+</blockquote>
+<hr>
+<ul>
+<li><em>借鉴文章</em> <a href="https://github.com/yelog/layui-soul-table/issues/33" target="_blank" rel="noopener">链接</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/layui复选框checkbox和子表重叠解决办法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-面试篇-经历" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/面试篇-经历/">面试篇-经历</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/面试篇-经历/" class="archive-article-date">
+  	<time datetime="2020-05-02T07:16:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、杭州阔知网络php后端面试</p>
+<ul>
+<li>职位描述<ol>
+<li>负责EduSoho网校系统的业务模块的设计、开发、集成； </li>
+<li>负责EduSoho网校系统的业务的维护，对客户负责； </li>
+<li>参与或组织敏捷开发过程，并践行最佳实践（迭代、单元测试、重构 等）； </li>
+<li>参与团队的目标制定、目标分解，负责制定自己的目标；</li>
+<li>参与团队技术分享、定期培训；</li>
+<li>在前端框架体系下，负责少量的css、javascript的功能实现；</li>
+</ol>
+<ul>
+<li>任职资格</li>
+</ul>
+<ol>
+<li>1~3年 PHP 开发经验，大专及以上计算机相关专业毕业；</li>
+<li>良好的编码习惯，对编程有较强的兴趣；</li>
+<li>掌握一款 PHP 框架，对其核心思想、实现原理有一定认知；</li>
+<li>深度参与过一个Web应用的设计与开发，掌握Web应用技术栈（MySQL、缓存、队列 等）；</li>
+<li>熟悉面向对象设计开发，掌握常用的重构技能、设计模式；</li>
+<li>对敏捷开发有实践和心得的优先；</li>
+<li>对重构、设计模式等编码实践有进取的优先；</li>
+</ol>
+</li>
+</ul>
+<p>二、面试过程-面试题 </p>
+<ol>
+<li>用php以及js写出“删除数组中的重复数字”<blockquote>
+<p>php有内置函数：arry_unique();</p>
+</blockquote>
+</li>
+<li>字符串类型比较 0 false null ‘’<blockquote>
+<p>弱类型比较</p>
+</blockquote>
+</li>
+<li>几个常用的端口号<blockquote>
+<p>ssh 22；http 80；HTTPS443；mysql；redis；9000</p>
+</blockquote>
+</li>
+<li>HTTP状态码<blockquote>
+<p>一：消息系列；二：成功系列；三：重定向系列；四：请求错误系列（客户端错误）；五：服务器端错误系列。 </p>
+</blockquote>
+</li>
+</ol>
+<p>302:临时转移成功，请求的内容已转移到新位置<br>401：代表未授权。<br>403:禁止访问<br>500:服务器内部错误<br>503：超载或系统维护，服务器暂时的无法处理客户端的请求</p>
+<ol start="5">
+<li>nginx php-fpm fastcgi</li>
+<li>三个查询比较<blockquote>
+<p>索引</p>
+<ul>
+<li>like”age%”</li>
+<li>like”age%”</li>
+<li>like”age%”</li>
+</ul>
+</blockquote>
+</li>
+<li>php抽象类和接口</li>
+<li>谈一谈对框架的理解<blockquote>
+<p>yii2 容器以及依赖注入</p>
+</blockquote>
+</li>
+<li>针对最近读的一本编程书进行提问</li>
+</ol>
+<p>三、针对简历进行提问</p>
+<ol>
+<li>dockerfile</li>
+<li>日志差错</li>
+<li>队列的实现原理</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">经历</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/面试篇-经历/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-面试篇-php" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/面试篇-php/">面试篇-准备</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/面试篇-php/" class="archive-article-date">
+  	<time datetime="2020-03-30T14:38:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1 php-面试题二</p>
+<blockquote>
+<ul>
+<li><a href>网上资料-找不到了</a></li>
+<li><a href="https://josiah.top/2020/03/%E9%9D%A2%E8%AF%95-php2/" target="_blank" rel="noopener">本人记录</a><!-- 指向本地  [icon.png](./images/icon.png) -->
+</li>
+</ul>
+</blockquote>
+<p>2 php-面试题一</p>
+<blockquote>
+<ul>
+<li><a href>网上资料–找不到了</a></li>
+<li><a href="http://josiah.top/2020/02/%E9%9D%A2%E8%AF%95-php1/" target="_blank" rel="noopener">本人记录</a></li>
+</ul>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/面试篇-php/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-禅师的初恋" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/禅师的初恋/">禅师的初恋</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/禅师的初恋/" class="archive-article-date">
+  	<time datetime="2020-03-29T14:30:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/2020-03-29-02.jpg" alt><br>一行禅师</p>
+<blockquote>
+<p>以前我也见过很多比丘尼，但却从未有过这种感觉</p>
+</blockquote>
+<blockquote>
+<p>否则，爱怎么会这样轻易的发生呢</p>
+</blockquote>
+<blockquote>
+<p>在我看到她的那一刻，我在她身上看到了我向往和珍爱的一切</p>
+</blockquote>
+<blockquote>
+<p>我不明白发生了什么，但我知道我的安宁被扰乱了</p>
+</blockquote>
+<blockquote>
+<p>挚爱的种子在我们每个人的心中都有</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">宜挚爱</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/禅师的初恋/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-phpstorm-丢失工具栏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -300,11 +798,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
         		</li>
       		
 		</ul>
@@ -664,445 +1162,6 @@
 
 
   
-    <article id="post-dp-动态规划" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/dp-动态规划/">dp-动态规划</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/dp-动态规划/" class="archive-article-date">
-  	<time datetime="2020-02-16T11:09:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>动态规</p>
-<p>题目特点：求最优解<br>1.计数</p>
-<pre><code>- 有多少种方式走到右下角
-- 有多少种方式选出K个数使得和是sum
-</code></pre><p>2.求最值</p>
-<pre><code>- 从左上角走到右下角路径的最大数字和
-- 最长上升子序列长度
-</code></pre><p>3.求存在性</p>
-<pre><code>- 取石子游戏，先手是否必胜
-- 能不能选出K个数使得和是sum
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/dp-动态规划/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-资料篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/资料篇/">资料篇--blog相关</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/资料篇/" class="archive-article-date">
-  	<time datetime="2020-02-15T11:00:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1 Blog 使用</p>
-<blockquote>
-<ul>
-<li><a href="https://www.zhihu.com/people/CrazyMilk/answers" target="_blank" rel="noopener">网上资料</a></li>
-<li><a href="https://josiah.top/2020/02/BLog%E5%B9%B3%E5%8F%B0%E6%80%BB%E7%BB%93%E4%BD%BF%E7%94%A8/" target="_blank" rel="noopener">个人总结</a><!-- 指向本地  [icon.png](./images/icon.png) -->
-</li>
-</ul>
-</blockquote>
-<p>2 hexo命令</p>
-<blockquote>
-<ul>
-<li><a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">资网上料</a></li>
-<li>个人总结</li>
-</ul>
-</blockquote>
-<p>3 markdown基本命令</p>
-<blockquote>
-<ul>
-<li><a href="http://xianbai.me/learn-md" target="_blank" rel="noopener">网上资料</a></li>
-<li>个人总结</li>
-</ul>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/资料篇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-康熙王朝-语录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/康熙王朝-语录/">康熙王朝-语录</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/康熙王朝-语录/" class="archive-article-date">
-  	<time datetime="2020-02-15T10:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>想想吧<br>崇祯皇帝朱由检 吊死在煤山上才几年呢 忘啦<br>那棵老歪脖子树还站在皇宫后边<br>天天得盯着你们呢<br>                        ——–康熙</p>
-</blockquote>
-<blockquote>
-<p>康熙：“你们记下朕说的每一句话，一个字也不要漏：康熙三十三年一月十日，朕视察八达岭，抚今返昔，感慨万千，特颁旨如下，长城，长城是个梦，是空的，是个无用之物，顶多是个摆设，长城啊长城，自秦始皇开创长城，仅两世就垮了，大明朝怎么样啊，他们用了百年之功万人之力，没有挡住我大清入关，江山易主，朕要以王道治天下，你们记着，从今天起，停建所有的城墙关隘，并诏告后世，凡大清国君，当持王道，取民心，狭兵马，永不筑长城。”<br>                        ——–康熙</p>
-</blockquote>
-<blockquote>
-<p>咱们这儿烂一点，大清国就烂一片，你们要是全烂了，大清各地就会揭竿而起，让咱们死无葬身之地啊！<br>                        ——–康熙</p>
-</blockquote>
-<blockquote>
-<p>朕富有天下，天下所有的女人都是朕的<br>                        ——–康熙</p>
-</blockquote>
-<blockquote>
-<p>越简朴，越尊贵<br>                        ——–《康熙王朝》<br>圣君不会杀人，只诛心<br>                        ——–姚启圣</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">中二</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">影视剧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/康熙王朝-语录/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-一周年" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/一周年/">一周年</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/一周年/" class="archive-article-date">
-  	<time datetime="2020-02-12T16:19:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>很惭愧 博客已经有一周年了<br>你好像对不起一年前那个积极的自己</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">资料</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/一周年/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-7月份零碎知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/7月份零碎知识点/">7月份零碎知识点</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/7月份零碎知识点/" class="archive-article-date">
-  	<time datetime="2019-07-28T15:34:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/7月份零碎知识点/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1192,43 +1251,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">知识点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Php</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">中二</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LOL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">start</a>
+                <a href="javascript:void(0)" class="js-tag color4">知识点</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1248,6 +1275,50 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">中二</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">LOL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">awk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">grep</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">start</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">layui</a>
               </li>
              
@@ -1264,6 +1335,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ide</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">PHP</a>
               </li>
              
@@ -1272,19 +1351,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">测试开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1296,7 +1375,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">宜挚爱</a>
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1304,27 +1383,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">影视剧</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ide</a>
+                <a href="javascript:void(0)" class="js-tag color4">宜挚爱</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">awk</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">grep</a>
+                <a href="javascript:void(0)" class="js-tag color3">经历</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
               </li>
             
             <div class="clearfix"></div>
