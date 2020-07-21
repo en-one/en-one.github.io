@@ -8,19 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com/tags/总结">
   <title>swoole重启报错Address already in use | 小鱼儿要游去哪里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="【重启swoole 端口时发现端口被占用】 代码如下:  netstat -anp | grep 端口号      kill 端口号      重启swoole项目   解决方法转载自：https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/">
+  <meta name="description" content="【重启swoole 端口时发现端口被占用】 代码如下:  netstat -anp | grep 端口号      kill 端口号      重启swoole项目   解决方法转载自：https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/  【WARNING">
 <meta name="keywords" content="知识点,php,swoole">
 <meta property="og:type" content="article">
 <meta property="og:title" content="swoole重启报错Address already in use">
 <meta property="og:url" content="http://yoursite.com/tags/总结/2020/07/swoole重启报错Address-already-in-use/index.html">
 <meta property="og:site_name" content="小鱼儿要游去哪里">
-<meta property="og:description" content="【重启swoole 端口时发现端口被占用】 代码如下:  netstat -anp | grep 端口号      kill 端口号      重启swoole项目   解决方法转载自：https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/">
+<meta property="og:description" content="【重启swoole 端口时发现端口被占用】 代码如下:  netstat -anp | grep 端口号      kill 端口号      重启swoole项目   解决方法转载自：https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/  【WARNING">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2020/07/20/b9kiDcB7U6Xayos.png">
-<meta property="og:updated_time" content="2020-07-20T10:28:05.654Z">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/21/UIx3QO.png">
+<meta property="og:updated_time" content="2020-07-21T07:53:03.307Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swoole重启报错Address already in use">
-<meta name="twitter:description" content="【重启swoole 端口时发现端口被占用】 代码如下:  netstat -anp | grep 端口号      kill 端口号      重启swoole项目   解决方法转载自：https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/">
+<meta name="twitter:description" content="【重启swoole 端口时发现端口被占用】 代码如下:  netstat -anp | grep 端口号      kill 端口号      重启swoole项目   解决方法转载自：https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/  【WARNING">
 <meta name="twitter:image" content="https://i.loli.net/2020/07/20/b9kiDcB7U6Xayos.png">
   
     <link rel="alternative" href="/atom.xml" title="小鱼儿要游去哪里" type="application/atom+xml">
@@ -189,6 +190,11 @@
 </blockquote>
 <p><br></p>
 <p>解决方法转载自：<a href="https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/" target="_blank" rel="noopener">https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/</a></p>
+<p><br></p>
+<h3 id="【WARNING-swManager-check-exit-status-worker-93-pid-25260-abnormal-exit-status-0-signal-9-】"><a href="#【WARNING-swManager-check-exit-status-worker-93-pid-25260-abnormal-exit-status-0-signal-9-】" class="headerlink" title="【WARNING    swManager_check_exit_status: worker#93[pid=25260] abnormal exit, status=0, signal=9 】"></a>【WARNING    swManager_check_exit_status: worker#93[pid=25260] abnormal exit, status=0, signal=9 】</h3><p><img src="https://s1.ax1x.com/2020/07/21/UIx3QO.png" alt="UIx3QO.png"></p>
+<blockquote>
+<p>在测试环境使用root账号进行项目重启<br>之后使用发布系统进行发布 发现不能重启项目，报错误 如上<br>原因：<br>发布系统是www 权限，重新发布不能杀掉root用户的进程，报错进程强制终止</p>
+</blockquote>
 
       
 
@@ -309,7 +315,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#【重启swoole-端口时发现端口被占用】"><span class="toc-number">1.</span> <span class="toc-text">【重启swoole 端口时发现端口被占用】</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#【重启swoole-端口时发现端口被占用】"><span class="toc-number">1.</span> <span class="toc-text">【重启swoole 端口时发现端口被占用】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#【WARNING-swManager-check-exit-status-worker-93-pid-25260-abnormal-exit-status-0-signal-9-】"><span class="toc-number">2.</span> <span class="toc-text">【WARNING    swManager_check_exit_status: worker#93[pid=25260] abnormal exit, status=0, signal=9 】</span></a></li></ol>
                     </div>
                 </span>
             </div>
