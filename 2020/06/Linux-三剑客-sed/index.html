@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="小鱼儿要游去哪里">
 <meta property="og:description" content="SED：sed的主要功能是替换，类似于sql里面的update语句。 流编辑器，一次处理一行内容，处理时，把当前处理的行存储在临时缓冲区，成为“模式空间”，接着用sed命令处理缓冲区的内容，处理完成后，把缓冲区内容送往屏幕，读入下一行，不断重复，直到文件末尾        文件内容没有被改变，除非使用重定向存储输出或-i   sed [options] ‘[地址定界] command’ file(">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-19T08:57:58.174Z">
+<meta property="og:updated_time" content="2020-07-30T05:57:42.620Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 三剑客-sed">
 <meta name="twitter:description" content="SED：sed的主要功能是替换，类似于sql里面的update语句。 流编辑器，一次处理一行内容，处理时，把当前处理的行存储在临时缓冲区，成为“模式空间”，接着用sed命令处理缓冲区的内容，处理完成后，把缓冲区内容送往屏幕，读入下一行，不断重复，直到文件末尾        文件内容没有被改变，除非使用重定向存储输出或-i   sed [options] ‘[地址定界] command’ file(">
@@ -193,7 +193,11 @@
 </li>
 </ul>
 <ul>
-<li>command: <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- d 删除模式空间匹配的行，并立即启用下一轮循环</span><br><span class="line">- p 打印当前模式空间内容，追加到默认输出之后</span><br><span class="line">- a 在指定行后面追加文本，使用\n实现多行追加</span><br><span class="line">- i 在行前面插入文本</span><br></pre></td></tr></table></figure></li>
+<li><p>command: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- d 删除模式空间匹配的行，并立即启用下一轮循环</span><br><span class="line">- D 删除模板第一行</span><br><span class="line">- s 替换指定字符</span><br><span class="line">- g 标识行内全部替换</span><br><span class="line">- p 打印当前模式空间内容，追加到默认输出之后</span><br><span class="line">- a 在指定行后面追加文本，使用\n实现多行追加</span><br><span class="line">- i 在行前面插入文本</span><br><span class="line">- c 取代</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>例子: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">例子一</span><br><span class="line">sed -e 4a\newline test.json   //在第四行前面添加“newline”</span><br><span class="line">sed -i <span class="string">'4d'</span> test.json         //删除第四行 </span><br><span class="line">sed -n <span class="string">'/is/p'</span> test.json      //搜索带有is的行并打印</span><br><span class="line">sed -n <span class="string">'/is/d'</span> test.json      //搜索带有is的行并删除</span><br><span class="line">sed <span class="string">'s/world/josiah/g'</span> test.json  //搜索并替换</span><br><span class="line">sed <span class="string">'2,5c No 2-5 number'</span>      //将第2-5行的内容取代成为『No 2-5 number』</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
