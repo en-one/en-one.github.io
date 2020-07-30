@@ -8,7 +8,7 @@ tags:
 ---
 
 
-AWK：统计相关数据，以及一定程度上代替grpe
+AWK（数据切片）：统计相关数据，以及一定程度上代替grpe
     
 >  awk 'BEGIN{ print "start" } pattern{ action } END{ print "end" }' file
 >  awk 'pattern{action}'
@@ -41,6 +41,7 @@ AWK：统计相关数据，以及一定程度上代替grpe
 - 例子: 
 ```bash
     
+    例子一:
  	ps | awk 'BEGIN{print "start"}{print $0}END{print "end"}'
     awk '/ 404 | 500 /' /tmp/nginx.log，
  	ps | awk 'NR>1'
@@ -48,9 +49,11 @@ AWK：统计相关数据，以及一定程度上代替grpe
     awk 'BEGIN{RS=":"}END{print NR}'     RS=":" 以RS后面为分隔符, NR行号
     awk '{print $NF}' 最后一个字段
     awk '{print $NF}' 倒数第二个字段
- 	echo $PATH | awk 'BEGIN{RS=":"}{print $0}' | grep -v "^$" | awk 'BEGIN{FS="\n";ORS=":"}{print $0}END{printf "\n" }'
  	echo "123|456_789" | awk 'BEGIN{FS="\\||_"}{print $2}'
  	echo "123|456_789" | awk "BEGIN{FS=\"\\\\||_\"}{print \$2}" #尽量使用单引号
+    例子三
+ 	echo $PATH | awk 'BEGIN{RS=":"}{print $0}' | grep -v "^$" | awk 'BEGIN{FS="\n";ORS=":"}{print $0}END{printf "\n" }'
+
 
 ```
 

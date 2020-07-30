@@ -37,8 +37,23 @@ SED：sed的主要功能是替换，类似于sql里面的update语句。
 - command: 
 ```text
     - d 删除模式空间匹配的行，并立即启用下一轮循环
+    - D 删除模板第一行
+    - s 替换指定字符
+    - g 标识行内全部替换
     - p 打印当前模式空间内容，追加到默认输出之后
     - a 在指定行后面追加文本，使用\n实现多行追加
     - i 在行前面插入文本
+    - c 取代                 
 
+```
+
+- 例子: 
+```bash
+    例子一
+    sed -e 4a\newline test.json   //在第四行前面添加“newline”
+    sed -i '4d' test.json         //删除第四行 
+    sed -n '/is/p' test.json      //搜索带有is的行并打印
+    sed -n '/is/d' test.json      //搜索带有is的行并删除
+    sed 's/world/josiah/g' test.json  //搜索并替换
+    sed '2,5c No 2-5 number'      //将第2-5行的内容取代成为『No 2-5 number』
 ```
