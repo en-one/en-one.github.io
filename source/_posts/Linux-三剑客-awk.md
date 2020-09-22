@@ -63,4 +63,7 @@ echo '1,10
  	2,20
  	3,30' | awk 'BEGIN{a=0;FS=","}{a+=$2}END{print a,a/NR}'
  	awk 'BEGIN{print 33*20*76/200/3}'
+    计算平均数
+    cat nginx.log | awk '{print $(NF-2)}' | awk '{t+=$1;}END{print t,t/NR}'
+
 ```
