@@ -5,15 +5,15 @@
 # Site
 title: 小鱼儿要游去哪里
 subtitle: 不读书，那你是条什么鱼
-description:
-keywords:
+description: josiah 用于自省
+keywords: josiah php go
 author: Josiah
-language:
-timezone:
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com/tags/总结/
+url: https://josiah.top/
 root: /
 permalink: :year/:month/:title/
 permalink_defaults:
