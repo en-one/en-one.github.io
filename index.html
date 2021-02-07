@@ -5,16 +5,20 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="http://yoursite.com/tags/总结">
+  <link rel="dns-prefetch" href="https://josiah.top">
   <title>小鱼儿要游去哪里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="josiah 用于自省">
+<meta name="keywords" content="josiah php go">
+<meta property="og:type" content="website">
 <meta property="og:title" content="小鱼儿要游去哪里">
-<meta property="og:url" content="http://yoursite.com/tags/总结/index.html">
+<meta property="og:url" content="https://josiah.top/index.html">
 <meta property="og:site_name" content="小鱼儿要游去哪里">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="josiah 用于自省">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小鱼儿要游去哪里">
+<meta name="twitter:description" content="josiah 用于自省">
   
     <link rel="alternative" href="/atom.xml" title="小鱼儿要游去哪里" type="application/atom+xml">
   
@@ -42,11 +46,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="/" class="profilepic">
+		<a href="/tags/总结/" class="profilepic">
 			<img src="/assets/img/myself.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Josiah</a></h1>
+		  <h1 class="header-author"><a href="/tags/总结/">Josiah</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">不读书，那你是条什么鱼</p>
@@ -57,9 +61,7 @@
 			
 				<li><a href="/tags/总结/">总结</a></li>
 	        
-				<li><a href="/tags/随笔/">杂乱句子</a></li>
-	        
-				<li><a href="/tags/资料/">资料</a></li>
+				<li><a href="/tags/随笔/">摘抄</a></li>
 	        
 				<li><a href="/tags/知识点/">知识点</a></li>
 	        
@@ -115,8 +117,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -133,13 +133,11 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/tags/总结/">总结</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/总结/">总结</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/随笔/">杂乱句子</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">摘抄</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/资料/">资料</a></li>
-		        
-					<li style="width: 25%"><a href="/tags/知识点/">知识点</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/知识点/">知识点</a></li>
 		        
 				</ul>
 			</nav>
@@ -156,20 +154,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-swoole重启报错Address-already-in-use" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-linux-创建软连接" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/swoole重启报错Address-already-in-use/">swoole重启报错Address already in use</a>
+      <a class="article-title" href="/2020/10/linux-创建软连接/">linux 创建软连接</a>
     </h1>
   
 
         
-        <a href="/2020/07/swoole重启报错Address-already-in-use/" class="archive-article-date">
-  	<time datetime="2020-07-20T09:44:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
+        <a href="/2020/10/linux-创建软连接/" class="archive-article-date">
+  	<time datetime="2020-10-25T08:47:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-25</time>
 </a>
         
       </header>
@@ -177,733 +175,26 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><br></p>
-<h3 id="【重启swoole-端口时发现端口被占用】"><a href="#【重启swoole-端口时发现端口被占用】" class="headerlink" title="【重启swoole 端口时发现端口被占用】"></a>【重启swoole 端口时发现端口被占用】</h3><p><img src="https://i.loli.net/2020/07/20/b9kiDcB7U6Xayos.png" alt="Snipaste_2020-07-20_18-17-38.png"></p>
-<p>代码如下:</p>
-<blockquote>
-<p>netstat -anp | grep 端口号<br>      kill 端口号<br>      重启swoole项目</p>
-</blockquote>
-<p><br></p>
-<p>解决方法转载自：<a href="https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/" target="_blank" rel="noopener">https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/</a></p>
-<p><br></p>
-<h3 id="【WARNING-swManager-check-exit-status-worker-93-pid-25260-abnormal-exit-status-0-signal-9-】"><a href="#【WARNING-swManager-check-exit-status-worker-93-pid-25260-abnormal-exit-status-0-signal-9-】" class="headerlink" title="【WARNING    swManager_check_exit_status: worker#93[pid=25260] abnormal exit, status=0, signal=9 】"></a>【WARNING    swManager_check_exit_status: worker#93[pid=25260] abnormal exit, status=0, signal=9 】</h3><p><img src="https://s1.ax1x.com/2020/07/21/UIx3QO.png" alt="UIx3QO.png"></p>
-<blockquote>
-<p>在测试环境使用root账号进行项目重启<br>之后使用发布系统进行发布 发现不能重启项目，报错误 如上<br>原因：<br>发布系统是www 权限，重新发布不能杀掉root用户的进程，报错进程强制终止</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">swoole</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/swoole重启报错Address-already-in-use/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Web自动化测试-知识点二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/Web自动化测试-知识点二/">Web自动化测试 知识点二</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/Web自动化测试-知识点二/" class="archive-article-date">
-  	<time datetime="2020-07-13T14:49:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><br></p>
-<h3 id="【动作链接ActionChains】"><a href="#【动作链接ActionChains】" class="headerlink" title="【动作链接ActionChains】"></a>【动作链接ActionChains】</h3><blockquote>
-<p>  &emsp;action = ActionChains(self.driver)<br>    &emsp;将动作放入队列里执行<br>    &emsp;action.perform()<br>    &emsp;动作<br>    &emsp;&emsp; 点击    ·action.click(element_click)<br>    &emsp;&emsp; 右击    action.context_click(element_right_click)<br>    &emsp;&emsp; 双击    action.double_click(element_double_click)<br>    &emsp;&emsp; 移动     action.move_to_element(ele)<br>    &emsp;&emsp; 输入框填写     action.send_keys(“josiah”) 可用KEYS.Space 模拟空格以及其他操作</p>
-</blockquote>
-<h3 id="【滑动链接ActionChains】"><a href="#【滑动链接ActionChains】" class="headerlink" title="【滑动链接ActionChains】"></a>【滑动链接ActionChains】</h3><blockquote>
-<p>  &emsp;action = TouchActions(self.driver)<br>    &emsp;将动作放入队列里执行<br>    &emsp;action.perform()<br>    &emsp;动作<br>    &emsp;&emsp; 滑动  action.scroll_from_element(el, 0 ,10000).perform()</p>
-</blockquote>
-<h3 id="【页面跳转】"><a href="#【页面跳转】" class="headerlink" title="【页面跳转】"></a>【页面跳转】</h3><blockquote>
-<p>   &emsp;获取下一个页面id,将当前页指到下一个目录页<br>    &emsp;&emsp; windows = self.driver.window_handles<br>    &emsp;&emsp; self.driver.switch_to_window(windows[-1])</p>
-</blockquote>
-<h3 id="【frame跳转】"><a href="#【frame跳转】" class="headerlink" title="【frame跳转】"></a>【frame跳转】</h3><blockquote>
-<p>  &emsp;&emsp; driver.switch_to.frame(“”)  元素id或者默认index<br>  &emsp;&emsp;  driver.switch_to.default_content()<br>  &emsp;&emsp; driver.switch_to.parent_frame() 切换到父级frame</p>
-</blockquote>
-<h3 id="【执行script-脚本】"><a href="#【执行script-脚本】" class="headerlink" title="【执行script 脚本】"></a>【执行script 脚本】</h3><blockquote>
-<p>  &emsp;&emsp; driver.execute_script(“js代码”)</p>
-</blockquote>
-<h3 id="【pageObject】"><a href="#【pageObject】" class="headerlink" title="【pageObject】"></a>【pageObject】</h3><blockquote>
-<p> &emsp;原则解读<br>   &emsp;&emsp;方法意义<br>    &emsp;&emsp;&emsp;&emsp;用公共方法代表UI所提供的功能<br>    &emsp;&emsp;&emsp;&emsp;方法应该返回其他的PageObject或者返回用于断言的数据<br>    &emsp;&emsp;&emsp;&emsp;同样的行为不同的结果可以建模为不同的方法<br>    &emsp;&emsp;&emsp;&emsp;不要在方法内加断言<br>    &emsp;&emsp;字段意义<br>    &emsp;&emsp;&emsp;&emsp;不要暴露页面内部的元素给外部<br>    &emsp;&emsp;&emsp;&emsp;不需要建模UI内的所有元素</p>
-</blockquote>
-<h3 id="【刚开始编写用例顺序】"><a href="#【刚开始编写用例顺序】" class="headerlink" title="【刚开始编写用例顺序】"></a>【刚开始编写用例顺序】</h3><blockquote>
-<p>  &emsp;&emsp;根据界面封装po类与方法，实现暂时设置为空<br>    &emsp;&emsp;编写用例<br>    &emsp;&emsp;实现page内的方法，与自动化框架开始结合<br>    &emsp;&emsp;调试<br>    &emsp;&emsp;创建base_page，把所有公共的方法进行封装</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">测试开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/Web自动化测试-知识点二/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Web自动化测试-知识点一" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/Web自动化测试-知识点一/">Web自动化测试 知识点一</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/Web自动化测试-知识点一/" class="archive-article-date">
-  	<time datetime="2020-07-13T14:49:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><br></p>
-<h3 id="【Seleium-测试用例编写】"><a href="#【Seleium-测试用例编写】" class="headerlink" title="【Seleium 测试用例编写】"></a>【Seleium 测试用例编写】</h3><blockquote>
-<p>   &emsp;导入依赖<br>        &emsp;&emsp;from selenium import webdriver<br>     &emsp;创建driver<br>        &emsp;&emsp;self.driver = webdriver.Chrome()<br>        &emsp;&emsp;self.driver.get(“<a href="https://work.weixin.qq.com/wework_admin/frame#index&quot;" target="_blank" rel="noopener">https://work.weixin.qq.com/wework_admin/frame#index&quot;</a>)<br>     &emsp;执行自动化步骤<br>     &emsp;断言</p>
-</blockquote>
-<h3 id="【三种等待】"><a href="#【三种等待】" class="headerlink" title="【三种等待】"></a>【三种等待】</h3><blockquote>
-<p>  直接等待<br>        &emsp;time.sleep(3)<br>    隐师等待<br>        &emsp;self.driver.implicitly_wait(3)<br>            &emsp;&emsp;轮训(默认0.5)查找 ,时间结束没出现就抛出异常<br>            &emsp;&emsp;缺点 全局的<br>   显式等待<br>        &emsp;webDriverWAit<br>            &emsp;&emsp;在代码中定义条件，当条件发生时才继续2执行代码(代码可为自定义函数，早定义函数一定要有参数)<br>            &emsp;&emsp;轮训(默认0.5)判断，条件成立，执行下一步，否则继续等待 直到超过设置的最长时间<br>            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#eg:每0.5轮询wait函数 返回true 则执行下一句</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wait</span><span class="params">(x)</span>:</span><span class="comment">#wait 默认传一个函数</span></span><br><span class="line">    <span class="keyword">return</span> self.driver.find_element(By.XPATH, <span class="string">'//*[@title="有了新帖的活动主题"]'</span>)</span><br><span class="line">WebDriverWait(self.driver, <span class="number">10</span>).until(wait)</span><br><span class="line">self.driver.find_element(By.XPATH, <span class="string">'//*[@title="在最近的一年，一月，一周或一天最活跃的主题"]'</span>).click()</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h3 id="【web控件定位-xpath】"><a href="#【web控件定位-xpath】" class="headerlink" title="【web控件定位-xpath】"></a>【web控件定位-xpath】</h3><p>xpath:</p>
-<pre><code> /    定位到孩子。
-//    定位到子子孙孙。
-//* 选取文档中多有节点
-@    选取属性。
-$x(&apos;//*[@id=&quot;s_tab&quot;]//a[1]&apos;) 选取id为s_tab下的第一个a表情
-</code></pre><p>&emsp;css selector：(常用语手机中嵌套的webview)</p>
-<pre><code>. class
-# id
- * 所有元素
- div,p div和p元素
- div p div内部所有p(相当于//)
- div&gt;p div的儿子元素p(相当于/)
- div+p div之后的p
- P:nth-child(2) 选择淇父元素第二个子元素的所有p
- $(#s_tab a:nth-child(2)) 表示a 的父元素下第二个标签
-</code></pre>   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#点击 self.driver.find_element(By.ID, 'kw').click()</span></span><br><span class="line">   <span class="comment">#输入框输入 self.driver.find_element(By.ID, 'kw').send_keys("josiah")</span></span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">测试开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/Web自动化测试-知识点一/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-正则匹配两个字符串之间内容" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/正则匹配两个字符串之间内容/">正则匹配两个字符串之间内容</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/正则匹配两个字符串之间内容/" class="archive-article-date">
-  	<time datetime="2020-07-10T10:52:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>1.前提: 获取php抛出的异常码 与异常信息<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">例子：</span><br><span class="line"><span class="keyword">throw</span> <span class="keyword">new</span> \<span class="keyword">Exception</span>(<span class="string">"该手机号已提交报名信息"</span>,<span class="string">'100407'</span>);</span><br><span class="line"><span class="keyword">throw</span> <span class="keyword">new</span> \<span class="keyword">Exception</span>(<span class="string">"报名人数已满"</span>,<span class="string">'100408'</span>);</span><br><span class="line"><span class="keyword">throw</span> <span class="keyword">new</span> \<span class="keyword">Exception</span>(<span class="string">'目前暂时关闭团队用户预约功能'</span>, <span class="number">1000101</span>);</span><br><span class="line">结果：</span><br><span class="line">该手机号已提交报名信息  <span class="number">100407</span></span><br><span class="line">报名人数已满 <span class="number">100408</span></span><br></pre></td></tr></table></figure></p>
-<p>2.代码<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"throw new \Exception("</span>该手机号已提交报名信息<span class="string">",'100407')"</span></span><br><span class="line">message = re.search(re.compile(<span class="string">'(?&lt;=\\().*?(?=\\,)'</span>), str).group()</span><br><span class="line">code = re.search(re.compile(<span class="string">'(?&lt;=\\,).*?(?=\\))'</span>), str).group()</span><br><span class="line">print(message, code)</span><br></pre></td></tr></table></figure></p>
-<p>3.知识点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- 正则</span><br><span class="line">表达式: A.*?B 匹配两个字符串A与B中间的字符串包含A与B：</span><br><span class="line">表达式: A.*?(?=B) 匹配两个字符串A与B中间的字符串包含A但是不包含B</span><br><span class="line">表达式: (?&lt;=A).*?(?=B) 配两个字符串A与B中间的字符串且不包含A与B：</span><br><span class="line"></span><br><span class="line">(?&lt;=\().*?(?=\,)  //第一个左括号与逗号之间内容</span><br><span class="line">(?&lt;=\,).*?(?=\))<span class="string">') //第一个逗号与右括号之间内容</span></span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/正则匹配两个字符串之间内容/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-DFS与BFS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/DFS与BFS/">DFS与BFS</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/DFS与BFS/" class="archive-article-date">
-  	<time datetime="2020-07-03T09:24:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="BFS-层次遍历"><a href="#BFS-层次遍历" class="headerlink" title="BFS 层次遍历"></a>BFS 层次遍历</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">levelOrder</span><span class="params">(self, root: TreeNode)</span> -&gt; List[List[int]]:</span></span><br><span class="line">        </span><br><span class="line">        levels = []</span><br><span class="line">        <span class="keyword">if</span> root <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> levels</span><br><span class="line">        </span><br><span class="line">        bfs = collections.deque([root])</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> len(bfs) &gt; <span class="number">0</span>:</span><br><span class="line">            levels.append([])</span><br><span class="line">            </span><br><span class="line">            level_size = len(bfs) //记录当前层</span><br><span class="line">            <span class="keyword">for</span> _ <span class="keyword">in</span> range(level_size):</span><br><span class="line">                node = bfs.popleft() //出队列</span><br><span class="line">                levels[<span class="number">-1</span>].append(node.val)</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span> node.left <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">                    bfs.append(node.left)</span><br><span class="line">                <span class="keyword">if</span> node.right <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">                    bfs.append(node.right)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> levels</span><br></pre></td></tr></table></figure>
-<h3 id="BFS-深度搜索"><a href="#BFS-深度搜索" class="headerlink" title="BFS 深度搜索"></a>BFS 深度搜索</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/DFS与BFS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-pytest-知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/pytest-知识点/">pytest 知识点</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/pytest-知识点/" class="archive-article-date">
-  	<time datetime="2020-06-28T14:49:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/pytest-知识点/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-实战知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/python-实战知识点/">python 实战知识点</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/python-实战知识点/" class="archive-article-date">
-  	<time datetime="2020-06-28T14:49:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.基础</p>
-<p>变量b里面引用a，使用“f”<br>a=”aaa”<br>b=f”fsfdsfsf{a}”</p>
-<p>2.数组切片 左闭右开</p>
-<p>3.列表 –数组<br>元祖(一个星号解压缩)<br> 集合<br>  字典(两个星号解压缩)–对象</p>
-<p>4.global 使变量在函数内可以被修改</p>
-<p>5.文件读写  open close<br>with open(‘venv/pyvenv.cfg’, ‘rt’) as f:</p>
-<pre><code># print(f.readlines())
-while True:
-    line = f.readline()
-    if line:
-        print(line)
-    else:
-        break
-</code></pre><p>6.json<br>json.dumps(python_obj) 吧数据类型转换成字符串<br>json.loads(json_string) 字符串转换成json<br>json.dump(json_string， open(file,’w’))  数据类型转换成字符串并存储在文件中<br>json.load(file_stream) 吧文件打开 把里面的字符串转换成数据类型<br>7.异常<br>try:<br>except:异常<br>else:不走异常<br>finally是否异常，都会走</p>
-<p>raise EXceptio()抛出异常</p>
-<p>8.进程 : 执行中的程序，拥有独立地址空间、内存 数据占<br>多线程并发执行–轮训<br>多进程并行</p>
-<p>9.包引用<br>import　值传递<br>form　import引用传递</p>
-<p>10 面对对象<br>__money 表示私有属性，实例以及子类不能访问，需要定义方法获取<br>dir(p)获取可以被访问的私有变量<br>类中的self 是实例，实例调用类里面的东西会默认传到第一个位置<br>在类的方法上面加@classmethod ，然后把self换成cls 可以用类名调用函数<br>super() 调用父类方法</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">测试开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/python-实战知识点/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-测试开发篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/测试开发篇/">测试开发篇</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/测试开发篇/" class="archive-article-date">
-  	<time datetime="2020-06-28T02:55:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<blockquote>
-<p>1.基础知识<br>2.LInux 与 BAsh 脚本<br>    &emsp;&emsp;linux 基础知识<br>    &emsp;&emsp;Linux 三剑客<br>       &emsp;&emsp;&emsp;&emsp;awk <a href="https://josiah.top/2020/06/Linux-三剑客-awk/" target="_blank" rel="noopener">链接</a><br>       &emsp;&emsp;&emsp;&emsp;grep <a href="https://josiah.top/2020/06/Linux-三剑客-grep/" target="_blank" rel="noopener">链接</a><br>       &emsp;&emsp;&emsp;&emsp;sed <a href="https://josiah.top/2020/06/Linux-三剑客-sed/" target="_blank" rel="noopener">链接</a><br>3.python 实战<br>    &emsp;&emsp;知识点一<a href="https://josiah.top/2020/06/python-实战知识点/" target="_blank" rel="noopener">链接</a><br>4.pytest 测试框架<br>   &emsp;&emsp;知识点一 <a href="https://josiah.top/2020/06/python-实战知识点/" target="_blank" rel="noopener">链接</a><br>   &emsp;&emsp;知识点二<br>5.WEb自动化测试<br>   &emsp;&emsp;知识点一 <a href="https://josiah.top/2020/07/Web自动化测试-知识点一/" target="_blank" rel="noopener">链接</a><br>   &emsp;&emsp;知识点一 <a href="https://josiah.top/2020/07/Web自动化测试-知识点二/" target="_blank" rel="noopener">链接</a></p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">测试开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/测试开发篇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux-三剑客-sed" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/Linux-三剑客-sed/">Linux 三剑客-sed</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/Linux-三剑客-sed/" class="archive-article-date">
-  	<time datetime="2020-06-17T03:53:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>SED：sed的主要功能是替换，类似于sql里面的update语句。</p>
-<p>流编辑器，一次处理一行内容，处理时，把当前处理的行存储在临时缓冲区，成为“模式空间”，接着用sed命令处理缓冲区的内容，处理完成后，把缓冲区内容送往屏幕，读入下一行，不断重复，直到文件末尾<br>        文件内容没有被改变，除非使用重定向存储输出或-i</p>
-<blockquote>
-<p> sed [options] ‘[地址定界] command’ file(s)</p>
-</blockquote>
+<h3 id="【创建软连接】"><a href="#【创建软连接】" class="headerlink" title="【创建软连接】"></a>【创建软连接】</h3><blockquote>
+<p>ln file hfile    为file 创建一个硬连接hfile<br>ln -s file sfile 为file 创建一个软连接sfile</p>
 <ul>
-<li><p>option:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-n 		只打印匹配到的行</span><br><span class="line">   -e		多点编辑</span><br><span class="line">   -r		支持扩展的正则表达式</span><br><span class="line">   -i 		直接将处理的结果写入文件</span><br><span class="line">   -i.bak	再将结果写入文件前备份一份</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>地址定界:(正则表达式)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- 不给地址 :对全文进行处理</span><br><span class="line">- 单地址： </span><br><span class="line">    - # ：指定的行</span><br><span class="line">    - /pattern/： 被此正则能够匹配到的每一行</span><br><span class="line">- 地址范围</span><br><span class="line"></span><br><span class="line">  sed -n &apos;1~2p&apos;  只打印奇数行 （1~2 从第1行，一次加2行）</span><br><span class="line">  sed -n &apos;2~2p&apos;  只打印偶数行</span><br></pre></td></tr></table></figure>
-</li>
+<li>硬链接可以随便转移到其他目录，软连接不行</li>
+<li>软连接标明文件属性，系统会自动识别为链接文件</li>
+<li>所有硬链接都必须位于同一分区，软连接可以位于不同分区</li>
 </ul>
+</blockquote>
+<h3 id="【红色闪烁的软连接】"><a href="#【红色闪烁的软连接】" class="headerlink" title="【红色闪烁的软连接】"></a>【红色闪烁的软连接】</h3><blockquote>
+<p>现红色并且闪烁的文件和目录名通常是失效的链接，(的链接文件为B但是A丢了B还在)<br>出现问题：<br>  &emsp;&emsp;ln -s file sfile 创建连接后为红色闪烁， 修改<br>  &emsp;&emsp;ln -s /data/code/file sfile 修改目标文件为后，正常路径<br>颜色表示：<br>  &emsp;&emsp;蓝色代表目录<br>  &emsp;&emsp;绿色代表可执行文件<br>  &emsp;&emsp;红色代表压缩文件<br>  &emsp;&emsp;浅蓝色表示连接文件<br>  &emsp;&emsp;灰色代表其他文件<br>  &emsp;&emsp;黄色代表设备文件，包括block,char,fifo</p>
+</blockquote>
+<h3 id="【问题：“ln-无法创建符号链接”-……-“-不支持的操作”】"><a href="#【问题：“ln-无法创建符号链接”-……-“-不支持的操作”】" class="headerlink" title="【问题：“ln: 无法创建符号链接” …… “: 不支持的操作”】"></a>【问题：“ln: 无法创建符号链接” …… “: 不支持的操作”】</h3><blockquote>
+<p>虚拟机共享windows文件夹,在共享的文件夹内,不可以创建到linux本地目录的链接.<br>  但可以在linux本地目录 创建到 共享目录的符号链接.</p>
+</blockquote>
+<h3 id="【借鉴文章连接】"><a href="#【借鉴文章连接】" class="headerlink" title="【借鉴文章连接】"></a>【借鉴文章连接】</h3><blockquote>
 <ul>
-<li><p>command: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- d 删除模式空间匹配的行，并立即启用下一轮循环</span><br><span class="line">- D 删除模板第一行</span><br><span class="line">- s 替换指定字符</span><br><span class="line">- g 标识行内全部替换</span><br><span class="line">- p 打印当前模式空间内容，追加到默认输出之后</span><br><span class="line">- a 在指定行后面追加文本，使用\n实现多行追加</span><br><span class="line">- i 在行前面插入文本</span><br><span class="line">- c 取代</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>例子: </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">例子一</span><br><span class="line">sed -e 4a\newline test.json   //在第四行前面添加“newline”</span><br><span class="line">sed -i <span class="string">'4d'</span> test.json         //删除第四行 </span><br><span class="line">sed -n <span class="string">'/is/p'</span> test.json      //搜索带有is的行并打印</span><br><span class="line">sed -n <span class="string">'/is/d'</span> test.json      //搜索带有is的行并删除</span><br><span class="line">sed <span class="string">'s/world/josiah/g'</span> test.json  //搜索并替换</span><br><span class="line">sed <span class="string">'2,5c No 2-5 number'</span>      //将第2-5行的内容取代成为『No 2-5 number』</span><br></pre></td></tr></table></figure></li>
+<li><a href="https://blog.csdn.net/u011350541/article/details/53099625" target="_blank" rel="noopener">https://blog.csdn.net/u011350541/article/details/53099625</a></li>
+<li><a href="https://blog.csdn.net/guozhongwei1/article/details/82834848" target="_blank" rel="noopener">https://blog.csdn.net/guozhongwei1/article/details/82834848</a></li>
 </ul>
+</blockquote>
 
       
 
@@ -925,7 +216,11 @@ while True:
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sed</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">软连接</a>
         		</li>
       		
 		</ul>
@@ -935,7 +230,7 @@ while True:
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/Linux-三剑客-sed/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/10/linux-创建软连接/">展开全文 >></a>
         </p>
       
 
@@ -965,48 +260,122 @@ while True:
 
 
   
-    <article id="post-Linux-三剑客-awk" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Shell-获取随机数以及损坏的解释器-没有那个文件或报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/Linux-三剑客-awk/">Linux 三剑客-awk</a>
+      <a class="article-title" href="/2020/10/Shell-获取随机数以及损坏的解释器-没有那个文件或报错/">“Shell 获取随机数” 以及 “损坏的解释器: 没有那个文件或报错”</a>
     </h1>
   
 
         
-        <a href="/2020/06/Linux-三剑客-awk/" class="archive-article-date">
-  	<time datetime="2020-06-17T03:53:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-17</time>
+        <a href="/2020/10/Shell-获取随机数以及损坏的解释器-没有那个文件或报错/" class="archive-article-date">
+  	<time datetime="2020-10-25T08:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>AWK（数据切片）：统计相关数据，以及一定程度上代替grpe</p>
-<blockquote>
-<p> awk ‘BEGIN{ print “start” } pattern{ action } END{ print “end” }’ file<br> awk ‘pattern{action}’</p>
+        <p><br></p>
+<h3 id="【在执行脚本时，弹出错误提示：-bin-sh-M：损坏的解释器-没有那个文件或目录】"><a href="#【在执行脚本时，弹出错误提示：-bin-sh-M：损坏的解释器-没有那个文件或目录】" class="headerlink" title="【在执行脚本时，弹出错误提示：/bin/sh^M：损坏的解释器: 没有那个文件或目录】"></a>【在执行脚本时，弹出错误提示：/bin/sh^M：损坏的解释器: 没有那个文件或目录】</h3><blockquote>
+<p> :set ff=unix<br>  :wq</p>
 </blockquote>
-<ul>
-<li><p>pattern:(找谁)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   aek &apos;BEGIN&#123;&#125;END&#123;&#125;&apos; 开始和结束</span><br><span class="line">   awk &apos;/pattern/&apos; 正则匹配</span><br><span class="line">   awk &apos;/aa/, /bb/&apos; 区间选择(两个选择以及之间的内容   )</span><br><span class="line">   awk &apos;$2~/pattern/&apos; 单列字段匹配(从0开始)</span><br><span class="line">   awk &apos;NR==2&apos; 取第二行</span><br><span class="line">awk &apos;NR&gt;1&apos;去掉第一行</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>action:(干啥)</p>
-</li>
-</ul>
-<ul>
-<li><p>数据处理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$0 代表这一行</span><br><span class="line">$N 代表第N个字段</span><br><span class="line">$NF 代表最后一个字段</span><br><span class="line"></span><br><span class="line">RS=&quot;:&quot; 以RS后面为分隔符,单行变多行  </span><br><span class="line">NR表示每一行的序号，NF表示这一行的字段数。</span><br><span class="line">计算行数要用 wc -l，END&#123;print NR&#125;也可用来输出行数</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>例子: </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">  例子一:</span><br><span class="line">ps | awk <span class="string">'BEGIN&#123;print "start"&#125;&#123;print $0&#125;END&#123;print "end"&#125;'</span></span><br><span class="line">  awk <span class="string">'/ 404 | 500 /'</span> /tmp/nginx.log，</span><br><span class="line">ps | awk <span class="string">'NR&gt;1'</span></span><br><span class="line">ps | awk <span class="string">'&#123;print $NF&#125;'</span></span><br><span class="line">  awk <span class="string">'BEGIN&#123;RS=":"&#125;END&#123;print NR&#125;'</span>     RS=<span class="string">":"</span> 以RS后面为分隔符, NR行号</span><br><span class="line">  awk <span class="string">'&#123;print $NF&#125;'</span> 最后一个字段</span><br><span class="line">  awk <span class="string">'&#123;print $NF&#125;'</span> 倒数第二个字段</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"123|456_789"</span> | awk <span class="string">'BEGIN&#123;FS="\\||_"&#125;&#123;print $2&#125;'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"123|456_789"</span> | awk <span class="string">"BEGIN&#123;FS=\"\\\\||_\"&#125;&#123;print \$2&#125;"</span> <span class="comment">#尽量使用单引号</span></span><br><span class="line">  例子三</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span> | awk <span class="string">'BEGIN&#123;RS=":"&#125;&#123;print $0&#125;'</span> | grep -v <span class="string">"^$"</span> | awk <span class="string">'BEGIN&#123;FS="\n";ORS=":"&#125;&#123;print $0&#125;END&#123;printf "\n" &#125;'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>数据计算</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'1,10</span></span><br><span class="line"><span class="string"> 	2,20</span></span><br><span class="line"><span class="string"> 	3,30'</span> | awk <span class="string">'BEGIN&#123;a=0;FS=","&#125;&#123;a+=$2&#125;END&#123;print a,a/NR&#125;'</span></span><br><span class="line"> 	awk <span class="string">'BEGIN&#123;print 33*20*76/200/3&#125;'</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<h3 id="【shell-产生随机数方法】"><a href="#【shell-产生随机数方法】" class="headerlink" title="【shell 产生随机数方法】"></a>【shell 产生随机数方法】</h3><figure class="highlight shell"><figcaption><span>script</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">方法一 内部系统变量（<span class="variable">$RANDOM</span>）</span></span><br><span class="line">    #生成0-32767</span><br><span class="line">        echo $RANDOM</span><br><span class="line">    #生成400000~500000</span><br><span class="line">        function rand()&#123;   </span><br><span class="line">            min=$1   </span><br><span class="line">            max=$(($2-$min+1))   </span><br><span class="line">            num=$(($RANDOM+1000000000)) #增加一个10位的数再求余   </span><br><span class="line">            echo $(($num%$max+$min))   </span><br><span class="line">        &#125;   </span><br><span class="line">         </span><br><span class="line">        rnd=$(rand 400000 500000)   </span><br><span class="line">        echo $rnd</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">方法二 awk的随机函数</span></span><br><span class="line">    awk 'BEGIN&#123;srand();print rand()*1000000&#125;'</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">方法三 读取Linux的uuid码</span></span><br><span class="line">    #UUID码全称是通用唯一识别码 (Universally Unique Identifier, UUID)，UUID格式是：包含32个16进制数字，以“-”连接号分为五段，形式为8-4-4-4-12的32个字符。linux的uuid码也是有内核提供的，在/proc/sys/kernel/random/uuid这个文件内。cat/proc/sys/kernel/random/uuid每次获取到的数据都会不同。</span><br><span class="line">        function rand()&#123;   </span><br><span class="line">        min=$1   </span><br><span class="line">        max=$(($2-$min+1))   </span><br><span class="line">        num=$(cat /proc/sys/kernel/random/uuid | cksum | awk -F ' ' '&#123;print $1&#125;')   </span><br><span class="line">        echo $(($num%$max+$min))   </span><br><span class="line">        &#125;   </span><br><span class="line">         </span><br><span class="line">        rnd=$(rand 100 500)   </span><br><span class="line">        echo $rnd</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">随机数</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/Shell-获取随机数以及损坏的解释器-没有那个文件或报错/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-jenkins-搭建与更新" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/jenkins-搭建与更新/">jenkins 搭建与更新</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/jenkins-搭建与更新/" class="archive-article-date">
+  	<time datetime="2020-10-24T10:07:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【jenkins-搭建】"><a href="#【jenkins-搭建】" class="headerlink" title="【jenkins 搭建】"></a>【jenkins 搭建】</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">version: &apos;3&apos;</span><br><span class="line">services:</span><br><span class="line">  jenkins:</span><br><span class="line">    image: &apos;jenkinsci/blueocean&apos;</span><br><span class="line">    container_name: &apos;jenkins&apos;</span><br><span class="line">    restart: always</span><br><span class="line">    ports:</span><br><span class="line">      - &apos;8081:8080&apos;</span><br><span class="line">      - &apos;50000:50000&apos;</span><br><span class="line">    environment:</span><br><span class="line">      TZ: Asia/Shanghai</span><br><span class="line">    volumes:</span><br><span class="line">      - &apos;/data/jenkins/data:/var/jenkins_home&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="【搭建后启动时权限问题】"><a href="#【搭建后启动时权限问题】" class="headerlink" title="【搭建后启动时权限问题】"></a>【搭建后启动时权限问题】</h3><blockquote>
+<p>  docker logs jenkins 发现权限问题<br>  原因：<br>  &emsp;&emsp;jenkins容器内部使用用户jenkins，外部分配权限是root，挂载文件时权限不够<br>  解决方法：<br>  &emsp;&emsp;1、docker-compose中添加 user：root 配置<br>  &emsp;&emsp;2、新建jenkins用户，外部给jenkins文件夹分配jenkis</p>
+</blockquote>
+<h3 id="【linux-用户组】"><a href="#【linux-用户组】" class="headerlink" title="【linux 用户组】"></a>【linux 用户组】</h3><blockquote>
+<p>useradd jenkins 创建用户<br>tail -1 /etc/passwd 查看用户信息<br>有关linux用户以及用户组  <a href="https://juejin.im/post/6844903862604824590#heading-2" target="_blank" rel="noopener">https://juejin.im/post/6844903862604824590#heading-2</a></p>
+</blockquote>
+<h3 id="【更新】"><a href="#【更新】" class="headerlink" title="【更新】"></a>【更新】</h3><blockquote>
+<p>  进入容器 docker exec -it jenkins bash<br>  下载软件 wget url(jenkins提示更新时会有页面链接)，如果不能下载，通过挂载路径将本地下载的war包放到对应目录下<br>  移动包   mv ./jenkins.war /usr/share/jenkins<br>  修改权限 chmod 777 /usr/share/jenkins/jenkins.war<br>  重启    docker restart jenkins</p>
+</blockquote>
 
       
 
@@ -1024,11 +393,11 @@ while True:
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测开</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">awk</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">jenkins</a>
         		</li>
       		
 		</ul>
@@ -1038,7 +407,693 @@ while True:
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/Linux-三剑客-awk/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/10/jenkins-搭建与更新/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hexo问题处理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/hexo问题处理/">hexo问题处理</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/hexo问题处理/" class="archive-article-date">
+  	<time datetime="2020-10-24T09:42:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>hexo d 部署时发生的问题，文件会正常上传，但是终端有error错误、</p>
+<h3 id="【”warning：-LF-will-be-replaced-by-CRLF”的去除方法】"><a href="#【”warning：-LF-will-be-replaced-by-CRLF”的去除方法】" class="headerlink" title="【”warning： LF will be replaced by CRLF”的去除方法】"></a>【”warning： LF will be replaced by CRLF”的去除方法】</h3><blockquote>
+<p> git config –global core.autocrlf false</p>
+</blockquote>
+<h3 id="【fatal：-master-does-not-appear-to-be-a-git-respository】"><a href="#【fatal：-master-does-not-appear-to-be-a-git-respository】" class="headerlink" title="【fatal： master does not appear to be a git respository】"></a>【fatal： master does not appear to be a git respository】</h3><blockquote>
+<p>错误（hexo2.0写法）：<br>&emsp;&emsp;deploy:<br>  &emsp;&emsp;&emsp;&emsp;type: git<br>  &emsp;&emsp;&emsp;&emsp;repo：<br>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;repository: <a href="https://github.com/en-one/en-one.github.io.git" target="_blank" rel="noopener">https://github.com/en-one/en-one.github.io.git</a><br>  &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;branch: master<br>  正确：<br>  &emsp;&emsp;deploy:<br>  &emsp;&emsp;&emsp;&emsp;type: git<br>  &emsp;&emsp;&emsp;&emsp;repository: <a href="https://github.com/en-one/en-one.github.io.git" target="_blank" rel="noopener">https://github.com/en-one/en-one.github.io.git</a><br>  &emsp;&emsp;&emsp;&emsp;branch: master</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">hexo问题处理</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/hexo问题处理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-分库分表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/分库分表/">分库分表</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/分库分表/" class="archive-article-date">
+  	<time datetime="2020-10-24T08:59:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【背景】"><a href="#【背景】" class="headerlink" title="【背景】"></a>【背景】</h3><blockquote>
+<p>   任何问题都是太大或者太小的问题，<br>    读的请求越来越多，主从架构，主库写，从库读<br>    写的请求越来越多 分库分表</p>
+</blockquote>
+<h3 id="【遇到问题】："><a href="#【遇到问题】：" class="headerlink" title="【遇到问题】："></a>【遇到问题】：</h3><blockquote>
+<p>   用户请求量太大<br>        &emsp;&emsp;单服务器tps 内存 io是有上限的，需要将请求打散分布到多个服务器<br>    单库太大<br>        &emsp;&emsp;单个数据库处理能力有限；单库所在服务器的磁盘空间有限；单库上的操作id有瓶颈<br>    单表太大<br>        &emsp;&emsp;插入、查询、更新的操作都会变慢、加字段、加索引、机器迁移都会产生高负载</p>
+</blockquote>
+<h3 id="【分库分表步骤】："><a href="#【分库分表步骤】：" class="headerlink" title="【分库分表步骤】："></a>【分库分表步骤】：</h3><blockquote>
+<p>   根据容量（当前容量和增长量）评估分库或分表个数 -&gt; 选key（均匀）-&gt; 分表规则（hash或range等）-&gt; 执行（一般双写）-&gt; 扩容问题（尽量减少数据的移动）。       </p>
+</blockquote>
+<h3 id="【总结】："><a href="#【总结】：" class="headerlink" title="【总结】："></a>【总结】：</h3><blockquote>
+<p>   分库分表，首先得知道瓶颈在哪里，然后才能合理地拆分（分库还是分表？水平还是垂直？分几个？）。且不可为了分库分表而拆分。<br>    选key很重要，既要考虑到拆分均匀，也要考虑到非partition key的查询。<br>    只要能满足需求，拆分规则越简单越好。</p>
+</blockquote>
+<h3 id="【分库分表的方式方法】："><a href="#【分库分表的方式方法】：" class="headerlink" title="【分库分表的方式方法】："></a>【分库分表的方式方法】：</h3><blockquote>
+<p>   先垂直分，后水平分</p>
+</blockquote>
+<blockquote>
+<p>   垂直拆分（表多而导致数据多，根据业务切分成不同库）<br>        &emsp;&emsp;垂直分表：<br>            &emsp;&emsp;&emsp;&emsp;”大表拆小表“，基于列字段进行。将表中表中不常用的，数据较大，长度较长的切分到扩展表<br>            &emsp;&emsp;&emsp;&emsp;eg：position + postition_detail<br>            &emsp;&emsp;&emsp;&emsp;res：<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;每个表的结构都不一样；<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;每个表的数据也不一样，一般来说，每个表的字段至少有一列交集，一般是主键，用于关联数据；<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;所有表的并集是全量数据；<br>        &emsp;&emsp;垂直分库·<br>            &emsp;&emsp;&emsp;&emsp;把一个库上的几张表放到多个数据库上<br>            &emsp;&emsp;&emsp;&emsp;eg：User一个库，商品Producet一个库，订单Order一个库。 放在多个服务器上，<br>            &emsp;&emsp;&emsp;&emsp;res：<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;每个库的结构都不一样；<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;每个库的数据也不一样，没有交集；<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;所有库的并集是全量数据；<br>    水平拆分（单张表数据太大，把表切分成多张表）<br>        &emsp;&emsp;水平分表：<br>            &emsp;&emsp;&emsp;&emsp;数据量巨大的单张表，按照某种规则，切分到多张表里，（在同一个库上）<br>           &emsp;&emsp;&emsp;&emsp; eg：order表分为order_n表<br>            &emsp;&emsp;&emsp;&emsp;res：<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;每个表的结构都一样；<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;每个表的数据都不一样，没有交集；<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;所有表的并集是全量数据；<br>        &emsp;&emsp;水平分库<br>            &emsp;&emsp;&emsp;&emsp;单张表的数据切分到多个服务器上去，每个服务器具有相应的库与表，只是表中数据集合不同<br>            &emsp;&emsp;&emsp;&emsp;eg：order表分为order_n表放到多个服务器<br>            &emsp;&emsp;&emsp;&emsp;res：<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;每个库的结构都一样；<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;每个库的数据都不一样，没有交集；<br>                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;所有库的并集是全量数据；</p>
+</blockquote>
+<h3 id="【规则】："><a href="#【规则】：" class="headerlink" title="【规则】："></a>【规则】：</h3><blockquote>
+<p>   水平分库：<br>        &emsp;&emsp;不跨库，不跨表，保证同一类的数据都在一个服务器上<br>    水平分表<br>        &emsp;&emsp;时间：按照年月日区分<br>        &emsp;&emsp;地狱：按照省市区分<br>        &emsp;&emsp;大小：从0-1000000一个表<br>        &emsp;&emsp;hash：用户ud取模</p>
+</blockquote>
+<h3 id="【例子】："><a href="#【例子】：" class="headerlink" title="【例子】："></a>【例子】：</h3><blockquote>
+<p>   大多空间换时间</p>
+<p>   用户表 id 手机号<br>    根据id用hash 在维护一个手机号与id对应（方便使用手机号的时候）</p>
+<p>   拉钩 简历表 用户投简历 商家看简历<br>    水平分库 分成多个库 每个库里面有两个记录 </p>
+</blockquote>
+<h3 id="【分库后面临问题】："><a href="#【分库后面临问题】：" class="headerlink" title="【分库后面临问题】："></a>【分库后面临问题】：</h3><blockquote>
+<p>   事务问题    ：一次投递要插入两条记录切分布在不同服务骑上，数据保持一致性<br>    垮库跨表的join问题：<br>        &emsp;&emsp;全局表（字典表）：基础数据，所有库都拷贝一份<br>        &emsp;&emsp;字段冗余<br>        &emsp;&emsp;系统层组织：在业务层分别查询出来，然后组装</p>
+</blockquote>
+<blockquote>
+<p>   额外的数据管理复旦以及数据运算压力</p>
+</blockquote>
+<p>【借鉴文章】</p>
+<blockquote>
+<p>   <a href="https://juejin.im/entry/6844903648670007310" target="_blank" rel="noopener">https://juejin.im/entry/6844903648670007310</a><br>    <a href="https://zhuanlan.zhihu.com/p/83674503?utm_source=wechat_session&amp;utm_medium=social&amp;utm_oi=751461416514387968" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/83674503?utm_source=wechat_session&amp;utm_medium=social&amp;utm_oi=751461416514387968</a></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测开</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/分库分表/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql-知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/mysql-知识点/">mysql 知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/mysql-知识点/" class="archive-article-date">
+  	<time datetime="2020-10-24T08:46:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【mysql-语法】"><a href="#【mysql-语法】" class="headerlink" title="【mysql 语法】"></a>【mysql 语法】</h3><blockquote>
+<p>   【基础语法】<br>    &emsp;&emsp;插入数据 &emsp;&emsp;insert into 表名（字段1,字段2）values(值1，值2)<br>    &emsp;&emsp;删除数据 &emsp;&emsp;delete from 表名 where 字段名= 字段值<br>    &emsp;&emsp;更新    &emsp;&emsp;&emsp;&emsp;update 表名 set 字段1 = 值</p>
+<p>   &emsp;&emsp;复制表  &emsp;&emsp;&emsp;&emsp;create table stu_sch like stu;<br>    &emsp;&emsp;删除表中的数据    &emsp;&emsp;truncate table stu_n1;</p>
+<p>   【条件】<br>    &emsp;&emsp;WHERE子句：&emsp;&emsp;从数据源中去掉不符合其搜索条件的数据<br>    &emsp;&emsp;GROUP BY子句：&emsp;&emsp;搜集数据行到各个组中，统计函数为各个组计算统计值<br>    &emsp;&emsp;HAVING子句：&emsp;&emsp;去掉不符合其组搜索条件的各行数据行</p>
+<p>   【表连接】<br>    &emsp;&emsp;left join &emsp;&emsp;左外连接，左表记录会全部显示出来，而右表智会显示符合搜索条件的记录，没有的null<br>    &emsp;&emsp;roght join<br>    &emsp;&emsp;inner join &emsp;&emsp;内连接  显示交集</p>
+</blockquote>
+<h3 id="【mysql索引】"><a href="#【mysql索引】" class="headerlink" title="【mysql索引】"></a>【mysql索引】</h3><blockquote>
+<p>   <a href="https://juejin.im/post/6844904126585765902#heading-0" target="_blank" rel="noopener">https://juejin.im/post/6844904126585765902#heading-0</a></p>
+</blockquote>
+<h3 id="【mysql-explain】"><a href="#【mysql-explain】" class="headerlink" title="【mysql explain】"></a>【mysql explain】</h3><h3 id="【主键-外键-非空-唯一约束】"><a href="#【主键-外键-非空-唯一约束】" class="headerlink" title="【主键 外键 非空 唯一约束】"></a>【主键 外键 非空 唯一约束】</h3><h3 id="【索引-事务概念】"><a href="#【索引-事务概念】" class="headerlink" title="【索引 事务概念】"></a>【索引 事务概念】</h3><h3 id="【redis】"><a href="#【redis】" class="headerlink" title="【redis】"></a>【redis】</h3><blockquote>
+<p>   list set hash zset string（最大512m）<br>    读110000/s ,写81000/s<br>    所有操作是原子性的，多个操作也支持事务<br>    支持订阅模式</p>
+</blockquote>
+<h3 id="【mongodb】"><a href="#【mongodb】" class="headerlink" title="【mongodb】"></a>【mongodb】</h3><h3 id="【neo4j】"><a href="#【neo4j】" class="headerlink" title="【neo4j】"></a>【neo4j】</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测开</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/mysql-知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-接口协议与抓包知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/接口协议与抓包知识点/">接口协议与抓包知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/接口协议与抓包知识点/" class="archive-article-date">
+  	<time datetime="2020-10-10T15:03:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【移动互联网公司技术架构】"><a href="#【移动互联网公司技术架构】" class="headerlink" title="【移动互联网公司技术架构】"></a>【移动互联网公司技术架构】</h3><blockquote>
+<p>   移动端测试(泛前端): 用户=&gt; Android<br>        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;IOS<br>        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;h5</p>
+</blockquote>
+<blockquote>
+<p>   服务端测试: API网关=&gt; 微服务集群 =&gt; Service<br>        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;BI<br>        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;DB                                    </p>
+</blockquote>
+<h3 id="【RPC协议】"><a href="#【RPC协议】" class="headerlink" title="【RPC协议】"></a>【RPC协议】</h3><blockquote>
+<p>   Remote Procedure Call 以本地代码调用的方式实现远程执行<br>    Dubbo gRPC Thrift</p>
+</blockquote>
+<h3 id="【三次握手与四次挥手】"><a href="#【三次握手与四次挥手】" class="headerlink" title="【三次握手与四次挥手】"></a>【三次握手与四次挥手】</h3><h3 id="【curl】"><a href="#【curl】" class="headerlink" title="【curl】"></a>【curl】</h3><blockquote>
+<p>   url = <a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a><br>    get请求： curl $url<br>    post请求: curl -d ‘xxx’ $url<br>    proxy使用 : curl -x ‘ip’ $url<br>    右键 copy as curl -v 2&gt;&amp;1 &gt;1.log</p>
+</blockquote>
+<h3 id="【常见状态码】"><a href="#【常见状态码】" class="headerlink" title="【常见状态码】"></a>【常见状态码】</h3><blockquote>
+<p>   1xx 通知信息 知道了或正在进行处理<br>    2xx 表示成功<br>    3xx 重定向 完成请求还需进一步的行动<br>    4xx 客户端差错<br>    5xx 服务端差错</p>
+</blockquote>
+<h3 id="【charles】"><a href="#【charles】" class="headerlink" title="【charles】"></a>【charles】</h3><blockquote>
+<p>   【map remote】<br>    【rewrite】<br>    【jq】<br>        &emsp;&emsp;echo ‘{“name”:”josiah”, “age”: 12}’ | jq<br>            &emsp;&emsp;&emsp;{ “name”: “josiah”,”age”: 12 }<br>        &emsp;&emsp;echo ‘{“name”:”josiah”, “age”: 12}’ | jq ‘{(.name):.age}’ //拼接<br>            &emsp;&emsp;&emsp;{ “josiah”: 12 }<br>    【map local】添加数据<br>    &emsp;&emsp;cat stock_demo.json |jq ‘.data.items=[.data.items[2]]’|jq ‘.data.items_size=1’ &gt;stock_data6.json<br>    &emsp;&emsp;cat stock_demo.json |jq ‘.data.items=[]’|jq ‘.data.items_size=0’ &gt;stock_data4.json</p>
+</blockquote>
+<h3 id="【mitmdump】"><a href="#【mitmdump】" class="headerlink" title="【mitmdump】"></a>【mitmdump】</h3><blockquote>
+<p>   mitdump -p 8888 -s test_rewrite.py<br>    在文件内进行修改，可直接对返回值进行修改</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">测试开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">接口协议与抓包</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/接口协议与抓包知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-接口测试知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/接口测试知识点/">接口测试知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/接口测试知识点/" class="archive-article-date">
+  	<time datetime="2020-10-10T14:52:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【rquest使用】"><a href="#【rquest使用】" class="headerlink" title="【rquest使用】"></a>【rquest使用】</h3><blockquote>
+<p>   直接的get请求<br>       &emsp;&emsp; r = requests.get(‘<a href="https://httpbin.testing-studio.com/get&#39;" target="_blank" rel="noopener">https://httpbin.testing-studio.com/get&#39;</a>)<br>    带传参的get(传参放在args里)<br>        &emsp;&emsp;r = requests.get(‘<a href="https://httpbin.testing-studio.com/get&#39;" target="_blank" rel="noopener">https://httpbin.testing-studio.com/get&#39;</a>, params=payload)<br>    带传参的post(传参放在form里)<br>        &emsp;&emsp;r = requests.post(‘<a href="https://httpbin.testing-studio.com/post&#39;" target="_blank" rel="noopener">https://httpbin.testing-studio.com/post&#39;</a>, data=payload)<br>    添加header头<br>        &emsp;&emsp;r = requests.get(‘<a href="https://httpbin.testing-studio.com/get&#39;" target="_blank" rel="noopener">https://httpbin.testing-studio.com/get&#39;</a>, headers={“hb”:”josiah”})<br>    使用jsonpath(获取所有path)<br>        &emsp;&emsp;jsonpath(r.json(), “$..name”)</p>
+</blockquote>
+<h3 id="【接口测试】"><a href="#【接口测试】" class="headerlink" title="【接口测试】"></a>【接口测试】</h3><blockquote>
+<p>   测试系统组件间接口的一种测试<br>    Api测试框架：通过直接请求HTTP接口来完成<br>    Web自动化测试框架：通过操作浏览器对目标对象进行操作</p>
+</blockquote>
+<h3 id="【restful架构】"><a href="#【restful架构】" class="headerlink" title="【restful架构】"></a>【restful架构】</h3><blockquote>
+<p>   每个url代表一种资源<br>    客户端和服务器之间，传递这种资源的某种表现层<br>    客户端通过四个Http动词 对服务器端资源进行操作，实现·表现层状态转换</p>
+<p>   资源： 网络上一个实体，一段文本，一张图片<br>    表现层：资源的呈现形式，文本用text,html<br>    状态转化：访问网站代表客户端和服务器的互动，post新建资源</p>
+</blockquote>
+<h3 id="【四个动作】"><a href="#【四个动作】" class="headerlink" title="【四个动作】"></a>【四个动作】</h3><blockquote>
+<p>   GET 获取资源<br>    POST 新建、更新资源<br>    PUT 更新资源<br>    DELETE 删除资源</p>
+</blockquote>
+<h3 id="【URL解析】"><a href="#【URL解析】" class="headerlink" title="【URL解析】"></a>【URL解析】</h3><blockquote>
+<p>   <a href="https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ID&amp;corpsecret=SECRET" target="_blank" rel="noopener">https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ID&amp;corpsecret=SECRET</a><br>        &emsp;&emsp;https: 协议，http，websockets<br>        &emsp;&emsp;qyapi.weixin.qq.com: 主机地址，DNS<br>        &emsp;&emsp;/cgi-bin/gettoken：资源地址<br>        &emsp;&emsp;?corpid=ID&amp;corpsecret=SECRET：参数</p>
+</blockquote>
+<h3 id="【pytest-xdist】-实现并行"><a href="#【pytest-xdist】-实现并行" class="headerlink" title="【pytest-xdist】 实现并行"></a>【pytest-xdist】 实现并行</h3><blockquote>
+<p>   pytest -n auto  # 命令行<br>    -n auto 可以放在pytest.ini配置文件里</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">测试开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">接口测试</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/接口测试知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-性能测试面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/性能测试面试题/">性能测试面试题</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/性能测试面试题/" class="archive-article-date">
+  	<time datetime="2020-10-05T07:51:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<p>【性能测试几个概念】</p>
+<blockquote>
+<p>  负载测试：数据在超负荷环境中运行，程序是否能够承担<br>  极限测试：在过量用户下单负载测试:连续执行多有能做的操作<br>  压力测试：系统资源特别低的情况下软件系统运行情况，目的是找到系统那里失效以及失效的地方<br>      &emsp;&emsp;稳定性压力测试：在选定的压力值下，长时间持续运行<br>                   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;考察各项性能指标是否在指定范围内、有无内存泄露、有无功能性鼓掌<br>      &emsp;&emsp;破坏性压力测试：通过破坏性不断加压的手段，往往能快速造成系统的崩溃或让问题明显的暴露出来</p>
+</blockquote>
+<p>【性能测试实践】</p>
+<blockquote>
+<p>  1.性能测试开始的前提是什么：<br>        &emsp;&emsp;项目稳定<br>    2.容量测试方法中为什么要以逐步递增的方式进行<br>        &emsp;&emsp;符合正常的业务场景，实际的生产环境中用户数也是慢慢增加的，在用户数目增加的场景中，tps回达到一个峰值不再增加。而响应时间慢慢变长，超过系统处理能力之后，就会产生一系列的error<br>    性能测试中响应时间是用来衡量业务快慢的，容量的衡量是tps<br>    3.如何识别系统瓶颈：<br>        &emsp;&emsp;识别瓶颈需要有完善的监控链路，对链路中时间消耗超过标准的地方进行具体分析，简单的系统架构一般是client-&gt;nginx-&gt;tomcat-&gt;mysql，需要对链路中慢的部分进行具体分析，响应时间慢在那一块，找到瓶颈点之后，构建分析决策树，然后进行相应的优化<br>  4.一般短的压测都市相同条件压三次取平均值<br>  5.一般很少会直接压线上，所以会有一个线上和测试的机器参数对比，有一个倍数关系，测试环境做完压测后再计算大概线上的结果</p>
+</blockquote>
+<p>【jmeter】<br>在评定服务器的性能时，应该结合TPS和并发用户数，以TPS为主，并发用户数为辅来衡量系统的性能</p>
+<blockquote>
+<p>  TPS: 每秒事务数，每秒钟request/事务<br>  QPS：每秒查询率，每秒的响应请求数，也即是最大吞吐能力。 （类似于TPS，只是应用于特定场景的吞吐量）<br>  并发数：系统可以同时承载的正常使用系统功能的用户的数量，系统同事处理的request/事务数<br>  吞吐量：系统在单位时间内处理请求的数量，对于单用户的系统，响应时间可以很好地度量系统的性能，但对于并发系统，通常需要用吞吐量作为性能指标<br>  响应时间： 系统对请求作出响应的时间，一般取平均响应时间，互联网上对于用户响应时间，有一个普遍的标准，2-5-10原则 （很快<2 还可以2~5 可以接受5~10 糟糕>10）<br>  计算公式<br>      &emsp;&emsp;QPS = req/sec = 请求数/秒<br>      &emsp;&emsp;TPS=并发用户数 / (响应时间+Thinktime)<br>      &emsp;&emsp;并发用户数 = 系统最大在线用户数的8%到12%<br>      &emsp;&emsp;吞吐量 = 1000(毫秒)/平均值(jmeter聚合报告)*线程数<br>  jmeter怎么用上一个接口的结果作为下一个接口的参数<br>      &emsp;&emsp;Json extractor 以及安装 json path extractor</2></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/性能测试面试题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-LInux与bash知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/LInux与bash知识点/">LInux与bash知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/LInux与bash知识点/" class="archive-article-date">
+  	<time datetime="2020-09-22T14:27:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【文件】"><a href="#【文件】" class="headerlink" title="【文件】"></a>【文件】</h3><blockquote>
+<p>   命令：<br>        &emsp;&emsp;ls cd pwd mkdir rmdir cp rm mv<br>    文件属性：<br>        &emsp;&emsp;drwxr-xr-x  &emsp;2   &emsp;root    &emsp;root     &emsp;1320    02-24 17：44    install.log<br>        &emsp;&emsp;权限属性    &emsp;&emsp;连接  所有者    用户组   大小     修改内容            文件以及目录名<br>        &emsp;&emsp;d rwx r-x r-x<br>        &emsp;&emsp;文件类型 d 目录   - 文件    l 链接文件  b 设备文件 c 串行端口设备，如键盘鼠标<br>        &emsp;&emsp;rwx 拥有者<br>        &emsp;&emsp;r-x 所属组<br>        &emsp;&emsp;r-x 其他人<br>        修改文件属性：<br>        &emsp;&emsp;r 读权限read 4<br>        &emsp;&emsp;w 写权限write 2<br>        &emsp;&emsp;x 操作权限execute <code></code><br>        &emsp;&emsp;chmod 777 test 修改test文件属性<br>        &emsp;&emsp;df -h 显示磁盘大小</p>
+</blockquote>
+<h3 id="【网络】"><a href="#【网络】" class="headerlink" title="【网络】"></a>【网络】</h3><blockquote>
+<p>   ping 测试网络连接情况<br>        &emsp;&emsp;-c ping的次数<br>        &emsp;&emsp;-l  每次ping的时间间隔<br>    netstat 打印linux网络系统的状态信息<br>        &emsp;&emsp;-t 所有tcp<br>        &emsp;&emsp;-u 所有udp<br>        &emsp;&emsp;-l 只显示监听端口<br>        &emsp;&emsp;-n 以数字形式显示地址和端口号<br>        &emsp;&emsp;-p 显示i昵称的pid和名字</p>
+</blockquote>
+<h3 id="【性能】"><a href="#【性能】" class="headerlink" title="【性能】"></a>【性能】</h3><blockquote>
+<p>   top： 持续监视系统性能<br>    ps 查看进程信息<br>        &emsp;&emsp;-aux 显示所有进程 包括用户 分组情况</p>
+</blockquote>
+<h3 id="【Linux三剑客-grep-awk-sed】"><a href="#【Linux三剑客-grep-awk-sed】" class="headerlink" title="【Linux三剑客 grep awk sed】"></a>【Linux三剑客 grep awk sed】</h3><h3 id="【bash编程】"><a href="#【bash编程】" class="headerlink" title="【bash编程】"></a>【bash编程】</h3><blockquote>
+<p>   -gt 大于<br>    -ly 小于<br>    循环：<br>        &emsp;&emsp;for … in ;do command1; done<br>        &emsp;&emsp;if [];then command1;elif[];then command2;fi<br>    脚本参数传递<br>        &emsp;&emsp;$0      &emsp;&emsp;脚本名称<br>        &emsp;&emsp;$1~$n   &emsp;&emsp;获取参数<br>        &emsp;&emsp;$#      &emsp;&emsp;传递到脚本的参数个数<br>        &emsp;&emsp;$$      &emsp;&emsp;脚本运行的当前进程id号<br>        &emsp;&emsp;$*      &emsp;&emsp;以一个但字符串显示所有向脚本传递的参数<br>        &emsp;&emsp;$?       &emsp;&emsp;显示最后命令的退出状态。0表述没有错误</p>
+</blockquote>
+<h3 id="【一键搭建web网站】"><a href="#【一键搭建web网站】" class="headerlink" title="【一键搭建web网站】"></a>【一键搭建web网站】</h3><blockquote>
+<p>   python2 -m CGIHTTPServer 80000<br>    python3 -m http.server 8000</p>
+</blockquote>
+<h3 id="【shell-小知识】"><a href="#【shell-小知识】" class="headerlink" title="【shell 小知识】"></a>【shell 小知识】</h3><blockquote>
+<p>   echo $a         会把\n转换为空格<br>    exho “$a”       显示原格式</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/LInux与bash知识点/">展开全文 >></a>
         </p>
       
 
@@ -1070,7 +1125,7 @@ while True:
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1082,7 +1137,7 @@ while True:
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Josiah
+    		&copy; 2021 Josiah
     	</div>
       	<div class="footer-right">
       		一条俗鱼
@@ -1165,39 +1220,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">资料</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Go</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据类型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基本数据</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">awk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1213,7 +1236,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">grep</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">随机数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1225,7 +1264,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo问题处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">start</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1237,11 +1296,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ide</a>
+                <a href="javascript:void(0)" class="js-tag color4">软连接</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">awk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">测开</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">jenkins</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1257,7 +1328,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ide</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1269,11 +1344,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">pytest</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+                <a href="javascript:void(0)" class="js-tag color2">swoole</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工具使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1285,7 +1368,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+                <a href="javascript:void(0)" class="js-tag color5">单元测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">unittest</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1293,11 +1384,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">接口协议与抓包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">接口测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color2">jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1310,10 +1417,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">经历</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swoole</a>
               </li>
             
             <div class="clearfix"></div>

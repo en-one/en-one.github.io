@@ -5,16 +5,20 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="http://yoursite.com/tags/总结">
+  <link rel="dns-prefetch" href="https://josiah.top">
   <title>小鱼儿要游去哪里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="josiah 用于自省">
+<meta name="keywords" content="josiah php go">
+<meta property="og:type" content="website">
 <meta property="og:title" content="小鱼儿要游去哪里">
-<meta property="og:url" content="http://yoursite.com/tags/总结/page/2/index.html">
+<meta property="og:url" content="https://josiah.top/page/2/index.html">
 <meta property="og:site_name" content="小鱼儿要游去哪里">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="josiah 用于自省">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小鱼儿要游去哪里">
+<meta name="twitter:description" content="josiah 用于自省">
   
     <link rel="alternative" href="/atom.xml" title="小鱼儿要游去哪里" type="application/atom+xml">
   
@@ -42,11 +46,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="/" class="profilepic">
+		<a href="/tags/总结/" class="profilepic">
 			<img src="/assets/img/myself.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Josiah</a></h1>
+		  <h1 class="header-author"><a href="/tags/总结/">Josiah</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">不读书，那你是条什么鱼</p>
@@ -57,9 +61,7 @@
 			
 				<li><a href="/tags/总结/">总结</a></li>
 	        
-				<li><a href="/tags/随笔/">杂乱句子</a></li>
-	        
-				<li><a href="/tags/资料/">资料</a></li>
+				<li><a href="/tags/随笔/">摘抄</a></li>
 	        
 				<li><a href="/tags/知识点/">知识点</a></li>
 	        
@@ -115,8 +117,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -133,13 +133,11 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/tags/总结/">总结</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/总结/">总结</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/随笔/">杂乱句子</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">摘抄</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/资料/">资料</a></li>
-		        
-					<li style="width: 25%"><a href="/tags/知识点/">知识点</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/知识点/">知识点</a></li>
 		        
 				</ul>
 			</nav>
@@ -156,39 +154,543 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Linux-三剑客-grep" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-测试实战" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/Linux-三剑客-grep/">Linux 三剑客-grep</a>
+      <a class="article-title" href="/2020/09/测试实战/">测试实战</a>
     </h1>
   
 
         
-        <a href="/2020/06/Linux-三剑客-grep/" class="archive-article-date">
-  	<time datetime="2020-06-17T03:53:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-17</time>
+        <a href="/2020/09/测试实战/" class="archive-article-date">
+  	<time datetime="2020-09-22T14:26:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>GREP(数据查找定位)：用于过滤、搜索的特定字符，可使用正则</p>
-<blockquote>
-<p> grep [option] pattern file<br> grep pattern -r dir/ 递归搜索</p>
+        <p><br></p>
+<h3 id="【需求分析】"><a href="#【需求分析】" class="headerlink" title="【需求分析】"></a>【需求分析】</h3><blockquote>
+<p>   通过需求文档了解需求的实现背景<br>    确定测试的范围和优先级<br>    细化测试点并确定测试方法</p>
 </blockquote>
-<ul>
-<li><p>option:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-A(-B,-C) n(行数)  显示匹配内容哪一行 以及该行之后(该行之前，该行前后)内容</span><br><span class="line">-c 			  统计匹配行数</span><br><span class="line">-E			  使用扩展正则表达式, egrep</span><br><span class="line">-f  		  从文件获取正则匹配</span><br><span class="line">-n 			  显示匹配的行号</span><br><span class="line">-i 			  忽略字符大小写差别</span><br><span class="line">-v			  显示不被正则匹配到的内容</span><br><span class="line">-o 			  仅显示匹配到的字符串</span><br><span class="line">-q 			  静默模式，不输出任何信息</span><br><span class="line">-w 			  匹配整个单词</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>pattern:(正则表达式)</p>
-</li>
-<li><p>例子: </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">例子一</span><br><span class="line">ps -ef  | grep bash //查找bash字符串</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"ABC"</span> | grep -i  abc</span><br><span class="line">ps -ef | grep bash | grep -v grep</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"1234 7654"</span> | grep -o <span class="string">"[0-9]4"</span> </span><br><span class="line"><span class="built_in">echo</span> <span class="string">"1234 7654"</span> | grep -oE <span class="string">"[0-9]4|76"</span></span><br><span class="line">例子二</span><br><span class="line">curl https://testerhome.com | grep -o <span class="string">'http://[a-zA-Z0-9\.\-]*'</span></span><br><span class="line">例子三</span><br><span class="line">ps -ef | grep <span class="string">'php-fpm'</span> | grep -vE <span class="string">'grep|master'</span> | awk <span class="string">'&#123;print $2&#125;'</span></span><br></pre></td></tr></table></figure></li>
-</ul>
+<h3 id="【测试设计】"><a href="#【测试设计】" class="headerlink" title="【测试设计】"></a>【测试设计】</h3><blockquote>
+<p>   测试用例：为发现软件中存在的问题二编写的一组包含测试输入、执行条件以及预期结果的文档。用老i合适软件产品是否满足需求<br>    测试用例组成：<br>        &emsp;&emsp;用例编号、模块、测试标题、前提条件、操作步骤、期望结果、实际结果<br>    测试用例编写步骤：<br>        &emsp;&emsp;划分功能模块、正向功能验证(冒烟)、单个功能验证、功能之间交互验证、隐形需求<br>    输入项设计要点：<br>        &emsp;&emsp;数据长度验证<br>        &emsp;&emsp;数据类型验证<br>        &emsp;&emsp;是否必填验证<br>        &emsp;&emsp;限制约束验证<br>    测试用例作用：<br>        &emsp;&emsp;理清思路，避免漏测以及重复测<br>        &emsp;&emsp;提高测试效率<br>        &emsp;&emsp;跟进测试进度<br>        &emsp;&emsp;高度领导做过<br>        &emsp;&emsp;跟进重复性工作<br>        &emsp;&emsp;更好的记录问题 发现问题 复现问题</p>
+</blockquote>
+<h3 id="【测试执行】"><a href="#【测试执行】" class="headerlink" title="【测试执行】"></a>【测试执行】</h3><blockquote>
+<p>   测试用例评审：<br>        &emsp;&emsp;本身描述是否清晰，是否存在歧义<br>        &emsp;&emsp;内容是否正确，是否与目标相一致<br>        &emsp;&emsp;期望结果是否确定、唯一<br>        &emsp;&emsp;是否覆盖率所有需求<br>        &emsp;&emsp;是否具有可执行性<br>        &emsp;&emsp;是否从用户方面来设计用户使用场景和业务流程的测试用例<br>        &emsp;&emsp;场景测试用例是否覆盖最复复杂的业务流程<br>        &emsp;&emsp;是否包含了正面、反面的用例<br>    执行<br>        &emsp;&emsp;对照用例进行执行<br>    Bug 包含的内容<br>        &emsp;&emsp;Bug 标题<br>        &emsp;&emsp;Bug 复现步骤<br>       &emsp;&emsp; Bug 严重程度<br>        &emsp;&emsp;Bug 优先级<br>        &emsp;&emsp;预期结果<br>       &emsp;&emsp; 实际结果<br>       &emsp;&emsp; 测试环境<br>        &emsp;&emsp;截图，log 日志</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/测试实战/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-测试理论与流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/测试理论与流程/">测试理论与流程</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/测试理论与流程/" class="archive-article-date">
+  	<time datetime="2020-09-22T14:24:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【常用测试平台】"><a href="#【常用测试平台】" class="headerlink" title="【常用测试平台】"></a>【常用测试平台】</h3><blockquote>
+<p>   测试用例管理与bug管理平台<br>        &emsp;&emsp;jira(推荐)<br>        &emsp;&emsp;redmine(推荐)<br>        &emsp;&emsp;testlink(不推荐)<br>        &emsp;&emsp;tapd、禅道、在线协作文档、gitalb<br>    代码管理平台<br>        &emsp;&emsp;gitlab<br>    流程管理平台(持续集成管理)<br>        &emsp;&emsp;jenkins<br>        &emsp;&emsp;gitlab runner<br>        &emsp;&emsp;github runner</p>
+</blockquote>
+<p>###【黑盒测试】（测试用例设计方法）</p>
+<blockquote>
+<p>   等价类划分<br>        &emsp;&emsp;把输入划分成和几类，在每个分类中选取少数代表性数据作为测试用例<br>        &emsp;&emsp;有效、无效等价类<br>        &emsp;&emsp;eg：6-12 数字与字母<br>        &emsp;&emsp;6-12            &emsp;&emsp;小于6|6~12|大于6<br>        &emsp;&emsp;数字与字母           &emsp;&emsp;纯字母|纯数字|字母与数字|无效字符<br>    边界值分析（行业经验，是对等价类的补充 ）<br>        &emsp;&emsp;eg：<br>        &emsp;&emsp;6~12            &emsp;&emsp;无效5|小于6|有效6|6~12|有效12|无效13<br>    因果图<br>    判定表<br>    决策树<br>        &emsp;&emsp;判定表可以用决策树表示<br>        &emsp;&emsp;决策树比因果图个判定表更好<br>        &emsp;&emsp;可以用流程图表示决策树<br>    探索式测试(风格)<br>        &emsp;&emsp;通常被认为是黑河测试，是一种基于上下文质量反馈的测试风格，基于上下文反馈，适时调整测试执行</p>
+</blockquote>
+<h3 id="【白盒测试】"><a href="#【白盒测试】" class="headerlink" title="【白盒测试】"></a>【白盒测试】</h3><blockquote>
+<p>   根据产品的内部实现细节来设计测试用例，代码覆盖率是主要度量指标<br>     执行手段： 单元测试、集成测试<br>        &emsp;&emsp;代码覆盖<br>            &emsp;&emsp;语句覆盖：   &emsp;&emsp;每行代码都要覆盖至少一次<br>            &emsp;&emsp;判定覆盖：   判定表达式的真假 至少覆盖一次<br>            &emsp;&emsp;判定/条件覆盖：判定覆盖与条件覆盖都必须覆盖<br>            &emsp;&emsp;条件组合覆盖：判定表达式中的多有条件组合都需要覆盖<br>            &emsp;&emsp;分支覆盖： 控制流中的每条边都要被覆盖一次<br>            &emsp;&emsp;路径覆盖： 所有路径都要尽量覆盖<br>            &emsp;&emsp;指令覆盖<br>            &emsp;&emsp;方法覆盖： 每个方法至少要被覆盖一次<br>            &emsp;&emsp;类覆盖： 每个类至少需要覆盖一次<br>        流程覆盖<br>            &emsp;&emsp;业务所使用的流程</p>
+</blockquote>
+<h3 id="【业务架构】"><a href="#【业务架构】" class="headerlink" title="【业务架构】"></a>【业务架构】</h3><blockquote>
+<p>   使用plantuml构建业务架构图<br>    时序图：用以表示关键时间的时序流程<br>    用例图：构建角色的功能支持<br>    活动图：黑盒测试方法的决策树应用<br>    组件图：哥哥微服务与对应的协议交互</p>
+</blockquote>
+<h3 id="【docker-安装jira】"><a href="#【docker-安装jira】" class="headerlink" title="【docker 安装jira】"></a>【docker 安装jira】</h3><blockquote>
+<p>   docker pull atlassian/jira-software<br>    docker volume create –name jiraVolume<br>    docker run -v jiraVolume:/var/atlassian/ application-data/jira –name=”jira” \<br>    -d -p 8089:8080 atlassian/jira-software</p>
+</blockquote>
+<h3 id="【新建测试用例管理流程】"><a href="#【新建测试用例管理流程】" class="headerlink" title="【新建测试用例管理流程】"></a>【新建测试用例管理流程】</h3><blockquote>
+<p>   新建问题类型<br>    把问题类型添加到项目中<br>    新建工作流<br>    把工作流和问题类型关联<br>    新建界面<br>    界面与问题类型关联<br>    新建字段<br>    字段添加到界面中<br>    新建域配置方案<br>    域配置方案关联项目</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/测试理论与流程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-mysql-插入datetime-默认值为0报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/mysql-插入datetime-默认值为0报错/">mysql 插入datetime 默认值为0报错</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/mysql-插入datetime-默认值为0报错/" class="archive-article-date">
+  	<time datetime="2020-08-29T14:30:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【mysql-插入datetime-默认值为0报错】"><a href="#【mysql-插入datetime-默认值为0报错】" class="headerlink" title="【mysql 插入datetime 默认值为0报错】"></a>【mysql 插入datetime 默认值为0报错】</h3><blockquote>
+<p>问题起因：<br>     &emsp;&emsp;用navicat导入数据时，报错:<br>    &emsp;&emsp;&emsp;&emsp;[Err] 1292 - Incorrect datetime value: ‘0000-00-00 00:00:00’ for column ‘CREATE_TIME’ at row 1<br>影响：<br>     &emsp;&emsp;mysql版本不同，不支持datetime为0的情况。<br>解决：<br>    &emsp;&emsp;select @@global.sql_mode;<br>     &emsp;&emsp;set @@global.sql_mode = ‘STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION’;   </p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/mysql-插入datetime-默认值为0报错/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-虚拟机里centos不能ssh" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/虚拟机里centos不能ssh/">虚拟机里centos不能ssh</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/虚拟机里centos不能ssh/" class="archive-article-date">
+  	<time datetime="2020-08-29T08:53:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【虚拟机里centos不能ssh】"><a href="#【虚拟机里centos不能ssh】" class="headerlink" title="【虚拟机里centos不能ssh】"></a>【虚拟机里centos不能ssh】</h3><blockquote>
+<p>问题起因：<br>     &emsp;&emsp;最新安装了vm，安装了centos7，保持虚拟机挂起，电脑关机后，第二天开启后，不能进行ssh联通<br>  方法一：<br>    &emsp;&emsp;编辑=&gt;虚拟网络编辑器=&gt;还原默认设置<br>   方法二：<br>     &emsp;&emsp;控制面板 管理工具 服务 启动wm-dhcp以及vm-nat为自动(延迟) 状态<br> 方法三：<br>        &emsp;&emsp;编辑=&gt;虚拟网络编辑器=&gt;桥接模式=&gt;桥接到INternet开头=&gt; service network restart 重启网络<br>            &emsp;&emsp;修改后发现虚拟机不能上网 vi /etc/resolv.conf，将namesever=8.8.8.8添加到文件中，然后重启网卡，</p>
+</blockquote>
+<p><br><br><br><br><br><br>参考：<a href="https://zhidao.baidu.com/question/553464573715382812.html" target="_blank" rel="noopener">https://zhidao.baidu.com/question/553464573715382812.html</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/虚拟机里centos不能ssh/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-xhell工具多个会话窗口消失" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/xhell工具多个会话窗口消失/">xhell工具多个会话窗口消失</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/xhell工具多个会话窗口消失/" class="archive-article-date">
+  	<time datetime="2020-08-29T08:39:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【xshll-多个会话窗口消失】"><a href="#【xshll-多个会话窗口消失】" class="headerlink" title="【xshll 多个会话窗口消失】"></a>【xshll 多个会话窗口消失】</h3><blockquote>
+<p>问题起因：<br>     &emsp;&emsp;使用xshell工具，导航栏上多个会话窗口消失 只能显示一个窗口<br>影响：<br>     &emsp;&emsp;当开启两个服务器，不能使其在同一个窗口内<br>解决：<br>     &emsp;&emsp;选中【会话选项卡】或者快捷键：Ctrl+Shift+T   </p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工具使用</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/xhell工具多个会话窗口消失/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-服务端性能测试-知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/服务端性能测试-知识点/">服务端性能测试-知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/服务端性能测试-知识点/" class="archive-article-date">
+  	<time datetime="2020-08-22T07:08:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【Tips】"><a href="#【Tips】" class="headerlink" title="【Tips】"></a>【Tips】</h3><blockquote>
+<p>   python -m http.server 90 启动python服务</p>
+</blockquote>
+<h3 id="【性能测试】"><a href="#【性能测试】" class="headerlink" title="【性能测试】"></a>【性能测试】</h3><blockquote>
+<p>   模拟多个用户的操作对服务器硬件性能的影响<br>        &emsp;&emsp;TPs 每秒事务处理能力<br>        &emsp;&emsp;RT 响应时间</p>
+</blockquote>
+<h3 id="【性能测试】-1"><a href="#【性能测试】-1" class="headerlink" title="【性能测试】"></a>【性能测试】</h3><blockquote>
+<p>   指标：最大并发用户数、HPS（点击率）、事物响应时间、每秒事务数、每秒点击两、吞吐量、CPU使用率、物理内存使用、网络流量使用<br>     前端：<br>        &emsp;&emsp;响应时间：用户从客户端发出请求，并得到相应，以及展示出来的整个过程的时间<br>        &emsp;&emsp;加载速度：页面内容显示的快慢<br>        &emsp;&emsp;流量：所消耗的网络流量<br>     后端：<br>        &emsp;&emsp;响应时间：接口从请求到响应、返回的时间<br>        &emsp;&emsp;并发用户数：同一时间点请求服务器的用户数，支持的最大并发数<br>        &emsp;&emsp;内存占用：即内存开销<br>        &emsp;&emsp;吞吐量：Transaction Per Second, 每秒事务数。在没有遇到性能瓶颈时：TPS=并发用户数<em>事务数/响应时间（1000ms/平均值</em>线程）。<br>        &emsp;&emsp;错误率：失败的事务数/事务总数<br>        &emsp;&emsp;资源使用率：CPU占用率、内存使用率、磁盘IO、网络IO</p>
+</blockquote>
+<h3 id="【Jmeter-线程组】"><a href="#【Jmeter-线程组】" class="headerlink" title="【Jmeter 线程组】"></a>【Jmeter 线程组】</h3><blockquote>
+<p>   setup<br>     线程组<br>     teardown</p>
+</blockquote>
+<h3 id="【influxdb-安装】"><a href="#【influxdb-安装】" class="headerlink" title="【influxdb 安装】"></a>【influxdb 安装】</h3><blockquote>
+<p>  docker network create grafana<br>  docker rm <code>docker ps -a | grep influxdb |awk &#39;{print $1}&#39;</code><br>  docker run -d –name influxdb –network grafana -p 8086:8086 -v /data/other/influxdb/:/var/lib/influxdb/influxdb<br>  docker run -d –name grafana –network grafana -p3000:3000 grafana/grafana:6.6.2<br>创建数据库<br>docker exec -it influxdb influx;<br>create database jmeter;</p>
+</blockquote>
+<blockquote>
+<p>use jmeter<br>select *from jmeter limit 3</p>
+</blockquote>
+<h3 id="【grafana-安装】"><a href="#【grafana-安装】" class="headerlink" title="【grafana 安装】"></a>【grafana 安装】</h3><blockquote>
+<p>docker run -d –name grafana –network grafana -p3000:3000 grafana/grafana:6.6.2</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/服务端性能测试-知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-虚拟机进行jmeter分布式压测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/虚拟机进行jmeter分布式压测/">虚拟机进行jmeter分布式压测</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/虚拟机进行jmeter分布式压测/" class="archive-article-date">
+  	<time datetime="2020-08-22T07:05:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br></p>
+<h3 id="【安装-jmeter】"><a href="#【安装-jmeter】" class="headerlink" title="【安装 jmeter】"></a>【安装 jmeter】</h3><blockquote>
+<p>安装java环境<br> 下载jmeter包，解压即可用 tar xf<br> 内存设置： jmeter.sh =&gt;JVM_ARGS=”-Xms512m -Xmx512m”</p>
+</blockquote>
+<h3 id="【分布式压测】"><a href="#【分布式压测】" class="headerlink" title="【分布式压测】"></a>【分布式压测】</h3><blockquote>
+<p>   远程服务器(服务节点、压力机)：<br>        &emsp;&emsp;安装java 、jmeter<br>        &emsp;&emsp;配置：<br>            &emsp;&emsp;&emsp;&emsp;vim jmeter.properties               &emsp;&emsp;&emsp;&emsp;server.rmi.ssl.disable=true 修改为true<br>            &emsp;&emsp;&emsp;&emsp;vim system.properties               &emsp;&emsp;&emsp;&emsp;最后面添加java.rmi.server.hostname=本机ip<br>    本机(控制节点):<br>        &emsp;&emsp;安装java 、jmeter<br>        &emsp;&emsp;配置：<br>            &emsp;&emsp;&emsp;&emsp;vim jmeter.properties               &emsp;&emsp;&emsp;&emsp;server.rmi.ssl.disable=true<br>            &emsp;&emsp;&emsp;&emsp;vim jmeter.properties               &emsp;&emsp;&emsp;&emsp;remote_hosts=负载机ip(多个可用逗号隔开)</p>
+</blockquote>
+<h3 id="【进行分布式压测】"><a href="#【进行分布式压测】" class="headerlink" title="【进行分布式压测】"></a>【进行分布式压测】</h3><blockquote>
+<p>压力机： ./jmeter-server 启动<br>    控制节点： run&gt;remote start&gt; 对应ip</p>
+</blockquote>
 
       
 
@@ -210,101 +712,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">grep</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/Linux-三剑客-grep/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js-使超链接变灰失效" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/js-使超链接变灰失效/">js 使超链接变灰失效</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/js-使超链接变灰失效/" class="archive-article-date">
-  	<time datetime="2020-06-16T06:14:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.需求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">报名已截止的活动，修改按钮灰色，不可点击</span><br></pre></td></tr></table></figure></p>
-<p>2.实现方式<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//需要变灰的按钮添加</span> <span class="string">class的动态变量</span> <span class="string">edit_grey</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="string">&#123;model:</span> <span class="string">btn,</span> <span class="attr">type:</span> <span class="string">link,</span> <span class="attr">hide_label:</span> <span class="literal">false</span><span class="string">,</span> <span class="attr">content:</span> <span class="string">" 修改"</span><span class="string">,</span> <span class="attr">class_name:</span> <span class="string">"<span class="template-variable">&#123;&#123;edit_grey&#125;&#125;</span>"</span><span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过css设置超链接 变灰以及不可点击</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> <span class="title">getGrey</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    setTimeout(getGrey,<span class="number">2</span>)<span class="comment">//④</span></span><br><span class="line">    <span class="keyword">var</span> edit_object = <span class="built_in">document</span>.getElementsByClassName(<span class="string">"edit_grey"</span>);</span><br><span class="line">    <span class="keyword">for</span> (x <span class="keyword">in</span> edit_object) &#123;</span><br><span class="line">        edit_object[x].style = <span class="string">"color:grey;pointer-events: none;"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>3.效果</p>
-<p><img src="https://s1.ax1x.com/2020/06/16/NFP4Fe.png" alt="NFP4Fe.png"></p>
-<p>4.遇到问题</p>
-<blockquote>
-<p>频繁以及快速刷新造成edit_object不能找到对应变量，添加一个两秒的定时器再度调用</p>
-</blockquote>
-<p>5.注意</p>
-<blockquote>
-<p>对应按钮修改css后，记得修改对应接口</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jmeter</a>
         		</li>
       		
 		</ul>
@@ -314,7 +726,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/js-使超链接变灰失效/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/08/虚拟机进行jmeter分布式压测/">展开全文 >></a>
         </p>
       
 
@@ -344,205 +756,40 @@
 
 
   
-    <article id="post-资料篇-编程文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-docker-中mysql启动问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/资料篇-编程文档/">资料篇--编程文档</a>
+      <a class="article-title" href="/2020/08/docker-中mysql启动问题/">docker 中mysql启动问题</a>
     </h1>
   
 
         
-        <a href="/2020/06/资料篇-编程文档/" class="archive-article-date">
-  	<time datetime="2020-06-11T10:00:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-11</time>
+        <a href="/2020/08/docker-中mysql启动问题/" class="archive-article-date">
+  	<time datetime="2020-08-04T13:37:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>redis 命令 <a href="https://redis.readthedocs.io/en/2.4/index.html" target="_blank" rel="noopener">链接</a></li>
-<li>php设计模式 <a href="https://hulin.gitbook.io/design-patterns-by-php/" target="_blank" rel="noopener">链接</a></li>
-<li>bash 脚本教程 <a href="https://wangdoc.com/bash/index.html" target="_blank" rel="noopener">链接</a></li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/资料篇-编程文档/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用篇-编程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/使用篇-编程/">使用篇--编程</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/使用篇-编程/" class="archive-article-date">
-  	<time datetime="2020-06-09T08:15:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>前端<ol>
-<li>layui复选框checkbox和子表重叠解决办法 –<a href="https://josiah.top/2020/06/layui复选框checkbox和子表重叠解决办法/" target="_blank" rel="noopener">文章</a></li>
-<li>js使超链接灰色失效– <a href="https://josiah.top/2020/06/js-使超链接变灰失效/" target="_blank" rel="noopener">文章</a></li>
-</ol>
-</li>
-</ul>
-<ul>
-<li>后端<ol>
-<li>python 正则匹配两个字符串之间内容– <a href="https://josiah.top/2020/07/正则匹配两个字符串之间内容/" target="_blank" rel="noopener">文章</a></li>
-<li>php swoole重启报错Address already in use [98]– <a href="https://josiah.top/2020/07/swoole重启报错Address-already-in-use/" target="_blank" rel="noopener">文章</a></li>
-</ol>
-</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/使用篇-编程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-layui复选框checkbox和子表重叠解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/layui复选框checkbox和子表重叠解决办法/">layui复选框checkbox和子表重叠解决办法</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/layui复选框checkbox和子表重叠解决办法/" class="archive-article-date">
-  	<time datetime="2020-06-09T06:53:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://s1.ax1x.com/2020/06/09/t51IgJ.png" alt="t51IgJ.png"></p>
-<p>代码如下:</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cols: [[</span><br><span class="line">              &#123;type: <span class="string">'checkbox'</span>, fixed: <span class="string">'left'</span>&#125;</span><br><span class="line">              , &#123;field: <span class="string">'account'</span>, title: <span class="string">'学号'</span>&#125;</span><br><span class="line">              , &#123;field: <span class="string">'name'</span>, title: <span class="string">'姓名'</span>&#125;</span><br><span class="line">              , &#123;field: <span class="string">'mobile'</span>, title: <span class="string">'手机号'</span>&#125;</span><br><span class="line">              , &#123;field: <span class="string">'grade_name'</span>, title: <span class="string">'年级'</span>&#125;</span><br><span class="line">          ]]</span><br><span class="line">          ,</span><br></pre></td></tr></table></figure>
+        <p><br></p>
+<h3 id="【MYSQL-服务无法启动，错误日志：InnoDB-ibdata1-must-be-writable】"><a href="#【MYSQL-服务无法启动，错误日志：InnoDB-ibdata1-must-be-writable】" class="headerlink" title="【MYSQL 服务无法启动，错误日志：InnoDB: .\ibdata1 must be writable】"></a>【MYSQL 服务无法启动，错误日志：InnoDB: .\ibdata1 must be writable】</h3><p>【问题起因】：<br>    docker里面mysql镜像一直在重启，<br>    docker logs mysql5 查看原因</p>
+<pre><code class="bash">2020-08-04T17:14:56.155066Z 0 [ERROR] InnoDB: .\ibdata1 must be writable
+2020-08-04T17:14:56.155066Z 0 [ERROR] InnoDB: The system tablespace must be writable
+2020-08-04T17:14:56.375466Z 0 [ERROR] Plugin <span class="string">'InnoDB'</span> init <span class="keyword">function</span> returned error.
+2020-08-04T17:14:56.375466Z 0 [ERROR] Plugin <span class="string">'InnoDB'</span> registration as a STORAGE ENGINE failed.
+2020-08-04T17:14:56.375466Z 0 [ERROR] Unknown/unsupported storage engine: InnoDB
+2020-08-04T17:14:56.375466Z 0 [ERROR] Aborting
+</code></pre>
 <p>解决方法:</p>
 <blockquote>
-<p>去掉fix字段, 如下：<br>{type: ‘checkbox’} </p>
+<p>删除日志中的文件，打开mysql安装目录的data文件夹，删除以下2个文件：ib_logfile0和ib_logfile1</p>
 </blockquote>
-<blockquote>
-<p>修改layui源码CSS中z-index=-1，如下：<br>.layui-table-fixed { position: absolute; left: 0; top: 0; z-index: -1; }</p>
-</blockquote>
-<hr>
-<ul>
-<li><em>借鉴文章</em> <a href="https://github.com/yelog/layui-soul-table/issues/33" target="_blank" rel="noopener">链接</a></li>
-</ul>
+<p><br><br>引自 <a href="https://blog.csdn.net/u012465296/article/details/71157286" target="_blank" rel="noopener">https://blog.csdn.net/u012465296/article/details/71157286</a></p>
 
       
 
@@ -560,11 +807,15 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
@@ -574,7 +825,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/layui复选框checkbox和子表重叠解决办法/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/08/docker-中mysql启动问题/">展开全文 >></a>
         </p>
       
 
@@ -604,370 +855,39 @@
 
 
   
-    <article id="post-面试篇-经历" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-swoole重启报错Address-already-in-use" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/面试篇-经历/">面试篇-经历</a>
+      <a class="article-title" href="/2020/07/swoole重启报错Address-already-in-use/">swoole重启报错Address already in use</a>
     </h1>
   
 
         
-        <a href="/2020/05/面试篇-经历/" class="archive-article-date">
-  	<time datetime="2020-05-02T07:16:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
+        <a href="/2020/07/swoole重启报错Address-already-in-use/" class="archive-article-date">
+  	<time datetime="2020-07-20T09:44:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、杭州阔知网络php后端面试</p>
-<ul>
-<li>职位描述<ol>
-<li>负责EduSoho网校系统的业务模块的设计、开发、集成； </li>
-<li>负责EduSoho网校系统的业务的维护，对客户负责； </li>
-<li>参与或组织敏捷开发过程，并践行最佳实践（迭代、单元测试、重构 等）； </li>
-<li>参与团队的目标制定、目标分解，负责制定自己的目标；</li>
-<li>参与团队技术分享、定期培训；</li>
-<li>在前端框架体系下，负责少量的css、javascript的功能实现；</li>
-</ol>
-<ul>
-<li>任职资格</li>
-</ul>
-<ol>
-<li>1~3年 PHP 开发经验，大专及以上计算机相关专业毕业；</li>
-<li>良好的编码习惯，对编程有较强的兴趣；</li>
-<li>掌握一款 PHP 框架，对其核心思想、实现原理有一定认知；</li>
-<li>深度参与过一个Web应用的设计与开发，掌握Web应用技术栈（MySQL、缓存、队列 等）；</li>
-<li>熟悉面向对象设计开发，掌握常用的重构技能、设计模式；</li>
-<li>对敏捷开发有实践和心得的优先；</li>
-<li>对重构、设计模式等编码实践有进取的优先；</li>
-</ol>
-</li>
-</ul>
-<p>二、面试过程-面试题 </p>
-<ol>
-<li>用php以及js写出“删除数组中的重复数字”<blockquote>
-<p>php有内置函数：arry_unique();</p>
-</blockquote>
-</li>
-<li>字符串类型比较 0 false null ‘’<blockquote>
-<p>弱类型比较</p>
-</blockquote>
-</li>
-<li>几个常用的端口号<blockquote>
-<p>ssh 22；http 80；HTTPS443；mysql；redis；9000</p>
-</blockquote>
-</li>
-<li>HTTP状态码<blockquote>
-<p>一：消息系列；二：成功系列；三：重定向系列；四：请求错误系列（客户端错误）；五：服务器端错误系列。 </p>
-</blockquote>
-</li>
-</ol>
-<p>302:临时转移成功，请求的内容已转移到新位置<br>401：代表未授权。<br>403:禁止访问<br>500:服务器内部错误<br>503：超载或系统维护，服务器暂时的无法处理客户端的请求</p>
-<ol start="5">
-<li>nginx php-fpm fastcgi</li>
-<li>三个查询比较<blockquote>
-<p>索引</p>
-<ul>
-<li>like”age%”</li>
-<li>like”age%”</li>
-<li>like”age%”</li>
-</ul>
-</blockquote>
-</li>
-<li>php抽象类和接口</li>
-<li>谈一谈对框架的理解<blockquote>
-<p>yii2 容器以及依赖注入</p>
-</blockquote>
-</li>
-<li>针对最近读的一本编程书进行提问</li>
-</ol>
-<p>三、针对简历进行提问</p>
-<ol>
-<li>dockerfile</li>
-<li>日志差错</li>
-<li>队列的实现原理</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">经历</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/面试篇-经历/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-面试篇-php" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/面试篇-php/">面试篇-准备</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/面试篇-php/" class="archive-article-date">
-  	<time datetime="2020-03-30T14:38:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1 php-面试题二</p>
+        <p><br></p>
+<h3 id="【重启swoole-端口时发现端口被占用】"><a href="#【重启swoole-端口时发现端口被占用】" class="headerlink" title="【重启swoole 端口时发现端口被占用】"></a>【重启swoole 端口时发现端口被占用】</h3><p><img src="https://i.loli.net/2020/07/20/b9kiDcB7U6Xayos.png" alt="Snipaste_2020-07-20_18-17-38.png"></p>
+<p>代码如下:</p>
 <blockquote>
-<ul>
-<li><a href>网上资料-找不到了</a></li>
-<li><a href="https://josiah.top/2020/03/%E9%9D%A2%E8%AF%95-php2/" target="_blank" rel="noopener">本人记录</a><!-- 指向本地  [icon.png](./images/icon.png) -->
-</li>
-</ul>
+<p>netstat -anp | grep 端口号<br>      kill 端口号<br>      重启swoole项目</p>
 </blockquote>
-<p>2 php-面试题一</p>
+<p><br></p>
+<p>解决方法转载自：<a href="https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/" target="_blank" rel="noopener">https://huanghantao.github.io/2017/07/02/bind-127-0-0-1-0-failed-Error-Address-already-in-use/</a></p>
+<p><br></p>
+<h3 id="【WARNING-swManager-check-exit-status-worker-93-pid-25260-abnormal-exit-status-0-signal-9-】"><a href="#【WARNING-swManager-check-exit-status-worker-93-pid-25260-abnormal-exit-status-0-signal-9-】" class="headerlink" title="【WARNING    swManager_check_exit_status: worker#93[pid=25260] abnormal exit, status=0, signal=9 】"></a>【WARNING    swManager_check_exit_status: worker#93[pid=25260] abnormal exit, status=0, signal=9 】</h3><p><img src="https://s1.ax1x.com/2020/07/21/UIx3QO.png" alt="UIx3QO.png"></p>
 <blockquote>
-<ul>
-<li><a href>网上资料–找不到了</a></li>
-<li><a href="http://josiah.top/2020/02/%E9%9D%A2%E8%AF%95-php1/" target="_blank" rel="noopener">本人记录</a></li>
-</ul>
+<p>在测试环境使用root账号进行项目重启<br>之后使用发布系统进行发布 发现不能重启项目，报错误 如上<br>原因：<br>发布系统是www 权限，重新发布不能杀掉root用户的进程，报错进程强制终止</p>
 </blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/面试篇-php/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-禅师的初恋" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/禅师的初恋/">禅师的初恋</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/禅师的初恋/" class="archive-article-date">
-  	<time datetime="2020-03-29T14:30:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/images/2020-03-29-02.jpg" alt><br>一行禅师</p>
-<blockquote>
-<p>以前我也见过很多比丘尼，但却从未有过这种感觉</p>
-</blockquote>
-<blockquote>
-<p>否则，爱怎么会这样轻易的发生呢</p>
-</blockquote>
-<blockquote>
-<p>在我看到她的那一刻，我在她身上看到了我向往和珍爱的一切</p>
-</blockquote>
-<blockquote>
-<p>我不明白发生了什么，但我知道我的安宁被扰乱了</p>
-</blockquote>
-<blockquote>
-<p>挚爱的种子在我们每个人的心中都有</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">宜挚爱</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/禅师的初恋/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-phpstorm-丢失工具栏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/phpstorm-丢失工具栏/">phpstorm 丢失工具栏</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/phpstorm-丢失工具栏/" class="archive-article-date">
-  	<time datetime="2020-03-29T13:25:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 在优化编辑器时，弄丢了ide主菜单栏!</p>
-<ul>
-<li><p>方法一： 修改配置文件</p>
-<blockquote>
-<p>一般存在在路径c盘中 我的位置：C:\Users\Administrator.PhpStorm2019.3\config\options<br>修改 ui.lnf</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使value值为true，若没有，则添加</span></span><br><span class="line">&lt;option name=<span class="string">"SHOW_MAIN_MENU"</span> value=<span class="string">"true"</span> /&gt;</span><br><span class="line"><span class="comment">//添加后，重启</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>方法二：快捷键设置</p>
-<blockquote>
-<p>双击shft<br>选择 view ，出现操作栏<br>恢复选择 appearance&gt;main menu</p>
-</blockquote>
-</li>
-</ul>
 
       
 
@@ -985,11 +905,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ide</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">swoole</a>
         		</li>
       		
 		</ul>
@@ -999,7 +919,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/phpstorm-丢失工具栏/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/07/swoole重启报错Address-already-in-use/">展开全文 >></a>
         </p>
       
 
@@ -1029,41 +949,47 @@
 
 
   
-    <article id="post-使用篇-windows相关" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Web自动化测试-知识点二" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/使用篇-windows相关/">使用篇--windows相关</a>
+      <a class="article-title" href="/2020/07/Web自动化测试-知识点二/">Web自动化测试 知识点二</a>
     </h1>
   
 
         
-        <a href="/2020/03/使用篇-windows相关/" class="archive-article-date">
-  	<time datetime="2020-03-29T12:59:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
+        <a href="/2020/07/Web自动化测试-知识点二/" class="archive-article-date">
+  	<time datetime="2020-07-13T14:49:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1 Phpstorm 丢失工具栏</p>
-<blockquote>
-<ul>
-<li><a href="https://blog.csdn.net/qq_42764468/article/details/101602294#commentBox" target="_blank" rel="noopener">网上资料</a></li>
-<li><a href="https://josiah.top/2020/03/phpstorm-%E4%B8%A2%E5%A4%B1%E5%B7%A5%E5%85%B7%E6%A0%8F/" target="_blank" rel="noopener">本人总结</a><!-- 指向本地  [icon.png](./images/icon.png) -->
-</li>
-</ul>
+        <p><br></p>
+<h3 id="【动作链接ActionChains】"><a href="#【动作链接ActionChains】" class="headerlink" title="【动作链接ActionChains】"></a>【动作链接ActionChains】</h3><blockquote>
+<p>  &emsp;action = ActionChains(self.driver)<br>    &emsp;将动作放入队列里执行<br>    &emsp;action.perform()<br>    &emsp;动作<br>    &emsp;&emsp; 点击    ·action.click(element_click)<br>    &emsp;&emsp; 右击    action.context_click(element_right_click)<br>    &emsp;&emsp; 双击    action.double_click(element_double_click)<br>    &emsp;&emsp; 移动     action.move_to_element(ele)<br>    &emsp;&emsp; 输入框填写     action.send_keys(“josiah”) 可用KEYS.Space 模拟空格以及其他操作</p>
 </blockquote>
-<p>2 windows7 丢失底部任务栏</p>
-<blockquote>
-<ul>
-<li><a href>网上资料–找不到了</a></li>
-<li>本人总结<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tskill explorer //命令</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<h3 id="【滑动链接ActionChains】"><a href="#【滑动链接ActionChains】" class="headerlink" title="【滑动链接ActionChains】"></a>【滑动链接ActionChains】</h3><blockquote>
+<p>  &emsp;action = TouchActions(self.driver)<br>    &emsp;将动作放入队列里执行<br>    &emsp;action.perform()<br>    &emsp;动作<br>    &emsp;&emsp; 滑动  action.scroll_from_element(el, 0 ,10000).perform()</p>
+</blockquote>
+<h3 id="【页面跳转】"><a href="#【页面跳转】" class="headerlink" title="【页面跳转】"></a>【页面跳转】</h3><blockquote>
+<p>   &emsp;获取下一个页面id,将当前页指到下一个目录页<br>    &emsp;&emsp; windows = self.driver.window_handles<br>    &emsp;&emsp; self.driver.switch_to_window(windows[-1])</p>
+</blockquote>
+<h3 id="【frame跳转】"><a href="#【frame跳转】" class="headerlink" title="【frame跳转】"></a>【frame跳转】</h3><blockquote>
+<p>  &emsp;&emsp; driver.switch_to.frame(“”)  元素id或者默认index<br>  &emsp;&emsp;  driver.switch_to.default_content()<br>  &emsp;&emsp; driver.switch_to.parent_frame() 切换到父级frame</p>
+</blockquote>
+<h3 id="【执行script-脚本】"><a href="#【执行script-脚本】" class="headerlink" title="【执行script 脚本】"></a>【执行script 脚本】</h3><blockquote>
+<p>  &emsp;&emsp; driver.execute_script(“js代码”)</p>
+</blockquote>
+<h3 id="【pageObject】"><a href="#【pageObject】" class="headerlink" title="【pageObject】"></a>【pageObject】</h3><blockquote>
+<p> &emsp;原则解读<br>   &emsp;&emsp;方法意义<br>    &emsp;&emsp;&emsp;&emsp;用公共方法代表UI所提供的功能<br>    &emsp;&emsp;&emsp;&emsp;方法应该返回其他的PageObject或者返回用于断言的数据<br>    &emsp;&emsp;&emsp;&emsp;同样的行为不同的结果可以建模为不同的方法<br>    &emsp;&emsp;&emsp;&emsp;不要在方法内加断言<br>    &emsp;&emsp;字段意义<br>    &emsp;&emsp;&emsp;&emsp;不要暴露页面内部的元素给外部<br>    &emsp;&emsp;&emsp;&emsp;不需要建模UI内的所有元素</p>
+</blockquote>
+<h3 id="【刚开始编写用例顺序】"><a href="#【刚开始编写用例顺序】" class="headerlink" title="【刚开始编写用例顺序】"></a>【刚开始编写用例顺序】</h3><blockquote>
+<p>  &emsp;&emsp;根据界面封装po类与方法，实现暂时设置为空<br>    &emsp;&emsp;编写用例<br>    &emsp;&emsp;实现page内的方法，与自动化框架开始结合<br>    &emsp;&emsp;调试<br>    &emsp;&emsp;创建base_page，把所有公共的方法进行封装</p>
 </blockquote>
 
       
@@ -1078,11 +1004,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">windows</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">测试开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -1092,7 +1022,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/使用篇-windows相关/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/07/Web自动化测试-知识点二/">展开全文 >></a>
         </p>
       
 
@@ -1124,7 +1054,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -1136,7 +1066,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Josiah
+    		&copy; 2021 Josiah
     	</div>
       	<div class="footer-right">
       		一条俗鱼
@@ -1219,39 +1149,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">资料</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Go</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据类型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基本数据</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">awk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1267,7 +1165,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">grep</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">随机数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1279,7 +1193,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo问题处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">start</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1291,11 +1225,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ide</a>
+                <a href="javascript:void(0)" class="js-tag color4">软连接</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">awk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">测开</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">jenkins</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1311,7 +1257,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ide</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1323,11 +1273,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">pytest</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+                <a href="javascript:void(0)" class="js-tag color2">swoole</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工具使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1339,7 +1297,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+                <a href="javascript:void(0)" class="js-tag color5">单元测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">unittest</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1347,11 +1313,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">接口协议与抓包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">接口测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color2">jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1364,10 +1346,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">经历</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swoole</a>
               </li>
             
             <div class="clearfix"></div>

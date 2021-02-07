@@ -5,16 +5,20 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="http://yoursite.com/tags/总结">
+  <link rel="dns-prefetch" href="https://josiah.top">
   <title>小鱼儿要游去哪里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="josiah 用于自省">
+<meta name="keywords" content="josiah php go">
+<meta property="og:type" content="website">
 <meta property="og:title" content="小鱼儿要游去哪里">
-<meta property="og:url" content="http://yoursite.com/tags/总结/page/5/index.html">
+<meta property="og:url" content="https://josiah.top/page/5/index.html">
 <meta property="og:site_name" content="小鱼儿要游去哪里">
-<meta property="og:locale" content="default">
+<meta property="og:description" content="josiah 用于自省">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小鱼儿要游去哪里">
+<meta name="twitter:description" content="josiah 用于自省">
   
     <link rel="alternative" href="/atom.xml" title="小鱼儿要游去哪里" type="application/atom+xml">
   
@@ -42,11 +46,11 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="/" class="profilepic">
+		<a href="/tags/总结/" class="profilepic">
 			<img src="/assets/img/myself.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Josiah</a></h1>
+		  <h1 class="header-author"><a href="/tags/总结/">Josiah</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">不读书，那你是条什么鱼</p>
@@ -57,9 +61,7 @@
 			
 				<li><a href="/tags/总结/">总结</a></li>
 	        
-				<li><a href="/tags/随笔/">杂乱句子</a></li>
-	        
-				<li><a href="/tags/资料/">资料</a></li>
+				<li><a href="/tags/随笔/">摘抄</a></li>
 	        
 				<li><a href="/tags/知识点/">知识点</a></li>
 	        
@@ -115,8 +117,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -133,13 +133,11 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/tags/总结/">总结</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/总结/">总结</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/随笔/">杂乱句子</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">摘抄</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/资料/">资料</a></li>
-		        
-					<li style="width: 25%"><a href="/tags/知识点/">知识点</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/知识点/">知识点</a></li>
 		        
 				</ul>
 			</nav>
@@ -156,20 +154,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-面试-php1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/hello-world/">做一条努力的鱼</a>
+      <a class="article-title" href="/2020/02/面试-php1/">面试-php1</a>
     </h1>
   
 
         
-        <a href="/2019/02/hello-world/" class="archive-article-date">
-  	<time datetime="2019-02-13T11:06:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-13</time>
+        <a href="/2020/02/面试-php1/" class="archive-article-date">
+  	<time datetime="2020-02-26T15:12:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-26</time>
 </a>
         
       </header>
@@ -177,11 +175,49 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ol>
-<li>记录自己的一些日常中使用的知识点，便于知识点的复习。</li>
-<li>对学习并且使用的知识点进行梳理。</li>
-<li>记录一些中二的东西。</li>
+<li><p>Redis 秒杀实现</p>
+<p>redis队列（set）解决抢购高并发的原理：</p>
+</li>
 </ol>
-<p><img src="https://i.loli.net/2019/03/13/5c88bfd1c3605.jpg" alt="5c88bfd1c3605"></p>
+<blockquote>
+<p>在程序跟数据库之间, 利用redis队列做一个缓冲机制， 让所有用户端请求进<br>行排队， 先进先出原则(lpush rpop)</p>
+</blockquote>
+<ul>
+<li>lpush -&gt; 把用户的请求压入redis队列</li>
+<li><p>rpop -&gt; 守护进程，取队列中的数据，按照规定的抢购名额</p>
+<p>把多有点成功用户写入redis 并生成订单在lpush 中查看中奖的用户 并且及时给用户提示结果</p>
+</li>
+</ul>
+<ol start="2">
+<li><p>服务器定时器实现</p>
+<blockquote>
+<p>   分       小时   日   月  星期    命令</p>
+</blockquote>
+<p> 0-59    0-23   1-31   1-12   0-6  command</p>
+</li>
+</ol>
+<p>30  7  8  <em>  </em>  ls   每月八号的七点半执行命令<br><em>/15 </em> <em>  </em>  <em>  ls   每十五分钟执行一次命令,(机每小时的0 15 30 45 执行)<br>0  </em>/2 <em>  </em>  *  ls  每两小时执行一次ls</p>
+<p>注意：</p>
+<ul>
+<li>星期中的0表示周日</li>
+<li>每隔两小时的时候前面不能是<em> ，</em>会表示每分钟都会执行</li>
+</ul>
+<p>第一种：crontab 在 etc/crontav 下设置 需要指定用户名</p>
+<p>1、vim 命令进入/etc/crontab</p>
+<p>2、在最后一行加入命令</p>
+<p>3、重启crontab 使命令生效，service crond restart</p>
+<p>第二种： crontab -e </p>
+<p>1、 添加命令</p>
+<p>2、查看脚本是否有权限</p>
+<p>3、查看命令所涉及到的文件是否有权限</p>
+<p>4、重启 使生效</p>
+<ol start="3">
+<li>结束死循环</li>
+</ol>
+<p>1、 ctrl + c 结束<br>2、ps -ef | grep 名称 查询进程号<br>3、kill进程</p>
+<ol start="4">
+<li>获取</li>
+</ol>
 
       
 
@@ -195,7 +231,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">start</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
         		</li>
       		
 		</ul>
@@ -205,7 +249,790 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/02/面试-php1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-BLog平台总结使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/BLog平台总结使用/">BLog平台总结使用</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/BLog平台总结使用/" class="archive-article-date">
+  	<time datetime="2020-02-16T16:14:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.创建博客</p>
+<blockquote>
+<p>安装nodejs（14版本会与hexo冲突）<br>安装hexo<br>在github上创建<br>…..</p>
+</blockquote>
+<p>2.如何在多台电脑上部署博客</p>
+<blockquote>
+<p>创建仓库 <a href="https://github.com/en-one/en-one.github.io.git" target="_blank" rel="noopener">https://github.com/en-one/en-one.github.io.git</a><br>创建两个分支：master 与 hexo；<br>设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；<br>使用git clone 拷贝仓库<br>在本地博客文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;<br>修改_config.yml中的deploy参数，分支应为master；<br>依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；<br>执行hexo g -d生成网站并部署到GitHub上。<br>这样一来，在GitHub上的en-one仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。完美( •̀ ω •́ )y！</p>
+</blockquote>
+<p>3.博客基础使用</p>
+<blockquote>
+<p>1.依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；<br>2.然后才执行hexo g -d发布网站到master分支上。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>以上方法使用知乎大佬的方法<br>作者：CrazyMilk<br>链接：<a href="https://www.zhihu.com/question/21193762/answer/79109280" target="_blank" rel="noopener">https://www.zhihu.com/question/21193762/answer/79109280</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">资料</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/BLog平台总结使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-blog使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/blog使用/">blog使用</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/blog使用/" class="archive-article-date">
+  	<time datetime="2020-02-15T11:00:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1 Blog 使用</p>
+<blockquote>
+<ul>
+<li><a href="https://www.zhihu.com/people/CrazyMilk/answers" target="_blank" rel="noopener">网上资料</a></li>
+<li><a href="https://josiah.top/2020/02/BLog%E5%B9%B3%E5%8F%B0%E6%80%BB%E7%BB%93%E4%BD%BF%E7%94%A8/">个人总结</a></li>
+</ul>
+</blockquote>
+<p>2 hexo问题处理 – <a href="https://josiah.top/2020/10/hexo问题处理/">文章</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/blog使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-康熙王朝-语录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/康熙王朝-语录/">康熙王朝-语录</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/康熙王朝-语录/" class="archive-article-date">
+  	<time datetime="2020-02-15T10:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>想想吧<br>崇祯皇帝朱由检 吊死在煤山上才几年呢 忘啦<br>那棵老歪脖子树还站在皇宫后边<br>天天得盯着你们呢<br>                        ——–康熙</p>
+</blockquote>
+<blockquote>
+<p>康熙：“你们记下朕说的每一句话，一个字也不要漏：康熙三十三年一月十日，朕视察八达岭，抚今返昔，感慨万千，特颁旨如下，长城，长城是个梦，是空的，是个无用之物，顶多是个摆设，长城啊长城，自秦始皇开创长城，仅两世就垮了，大明朝怎么样啊，他们用了百年之功万人之力，没有挡住我大清入关，江山易主，朕要以王道治天下，你们记着，从今天起，停建所有的城墙关隘，并诏告后世，凡大清国君，当持王道，取民心，狭兵马，永不筑长城。”<br>                        ——–康熙</p>
+</blockquote>
+<blockquote>
+<p>咱们这儿烂一点，大清国就烂一片，你们要是全烂了，大清各地就会揭竿而起，让咱们死无葬身之地啊！<br>                        ——–康熙</p>
+</blockquote>
+<blockquote>
+<p>朕富有天下，天下所有的女人都是朕的<br>                        ——–康熙</p>
+</blockquote>
+<blockquote>
+<p>越简朴，越尊贵<br>                        ——–《康熙王朝》<br>圣君不会杀人，只诛心<br>                        ——–姚启圣</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">中二</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">影视剧</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/康熙王朝-语录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-周年" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/周年/">周年</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/周年/" class="archive-article-date">
+  	<time datetime="2020-02-12T16:19:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><br><br><br></p>
+<ul>
+<li><h2 id="零周年-2019-02-13"><a href="#零周年-2019-02-13" class="headerlink" title="零周年  2019-02-13"></a>零周年  2019-02-13</h2><blockquote>
+<p>开始的开始</p>
+</blockquote>
+</li>
+</ul>
+<p><br><br><br></p>
+<ul>
+<li><h2 id="一周年-2020-02-13"><a href="#一周年-2020-02-13" class="headerlink" title="一周年  2020-02-13"></a>一周年  2020-02-13</h2><blockquote>
+<p>很惭愧 博客已经有一周年了<br>你好像对不起一年前那个积极的自己</p>
+</blockquote>
+</li>
+</ul>
+<p><br><br><br></p>
+<ul>
+<li><h2 id="二周年-2021-02-13"><a href="#二周年-2021-02-13" class="headerlink" title="二周年  2021-02-13"></a>二周年  2021-02-13</h2><blockquote>
+<p>有改变 但仍旧不够努力</p>
+</blockquote>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">资料</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/周年/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-nginx-php-fpm-运行原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/nginx-php-fpm-运行原理/">nginx + php-fpm 运行原理</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/nginx-php-fpm-运行原理/" class="archive-article-date">
+  	<time datetime="2019-07-28T15:33:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、-nginx-是什么"><a href="#一、-nginx-是什么" class="headerlink" title="一、 nginx 是什么"></a>一、 nginx 是什么</h2><blockquote>
+<p>Nginx (“engine x”) 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。</p>
+</blockquote>
+<h2 id="二、-php-fpm是什么"><a href="#二、-php-fpm是什么" class="headerlink" title="二、 php-fpm是什么"></a>二、 php-fpm是什么</h2><blockquote>
+<ul>
+<li>cgi : cgi协议，实现语言解释器与webwerver的通信。早期webserver只能处理html静态文件,按照cgi议去写，可以实现websever与动态语言的通信。如php-cgi程序。<br>（缺点：webserver每收到一个请求，都要去去fork一个cgi进程，请求结束后再kill这个进程）</li>
+<li>fast-cgi: cgi协议改良版，每次处理完请求后，不会kill掉进程，而是保留这个进程，使这个进程可以一次处理多个请求。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>php-fpm: (php-Fastcgi Process Manager),php-fpm是 FastCGI 的实现，并提供了进程管理的功能。<br>进程包含master与worker两种进程:<br>master：只有一个，接收来自webserver的请求<br>worker：多个，每个进程内部都嵌入了一个php解释器，是php真正执行代码的地方</li>
+</ul>
+</blockquote>
+<h2 id="三、-nginx-php-fpm怎么工作"><a href="#三、-nginx-php-fpm怎么工作" class="headerlink" title="三、 nginx+php-fpm怎么工作"></a>三、 nginx+php-fpm怎么工作</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/nginx-php-fpm-运行原理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-6-9-本周知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/6-9-本周知识点/">（补）6月份知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/6-9-本周知识点/" class="archive-article-date">
+  	<time datetime="2019-07-08T14:43:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>6月份总结的几个小知识点</p>
+        
+      
+
+      
+    </blockquote></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Php</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/6-9-本周知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-win10-部署docker下nmp环境-遇见问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/win10-部署docker下nmp环境-遇见问题/">win10 部署docker下nmp环境-遇见问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/win10-部署docker下nmp环境-遇见问题/" class="archive-article-date">
+  	<time datetime="2019-07-06T15:49:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>记录本人在win10 环境下使用docker部署php开发环境遇到问题<br>以下仅为本人所见所闻。<br>
+        
+      
+
+      
+    </p></blockquote></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">资料</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/win10-部署docker下nmp环境-遇见问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-5-27-本周知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/5-27-本周知识点/">6.2-本周知识点</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/5-27-本周知识点/" class="archive-article-date">
+  	<time datetime="2019-06-02T08:36:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>一周工作中遇到的零碎知识点</p>
+        
+      
+
+      
+    </blockquote></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Php</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/5-27-本周知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-php-在chrome下使用https导出execl文件错误" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/php-在chrome下使用https导出execl文件错误/">php 在chrome下使用https导出execl文件错误</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/php-在chrome下使用https导出execl文件错误/" class="archive-article-date">
+  	<time datetime="2019-05-20T11:57:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>周一，一个天气晴朗的日子，然而线上产品却出了问题……</p>
+        
+      
+
+      
+    </blockquote></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">https</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">chrome</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/php-在chrome下使用https导出execl文件错误/">展开全文 >></a>
         </p>
       
 
@@ -237,7 +1064,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
     </nav>
   
 
@@ -249,7 +1076,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Josiah
+    		&copy; 2021 Josiah
     	</div>
       	<div class="footer-right">
       		一条俗鱼
@@ -332,39 +1159,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">资料</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Go</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据类型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">基本数据</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">awk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sed</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -380,7 +1175,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">grep</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sed</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">随机数</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -392,7 +1203,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo问题处理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">start</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -404,11 +1235,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ide</a>
+                <a href="javascript:void(0)" class="js-tag color4">软连接</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">awk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">测开</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">jenkins</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -424,7 +1267,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ide</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -436,11 +1283,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">docker</a>
+                <a href="javascript:void(0)" class="js-tag color2">pytest</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+                <a href="javascript:void(0)" class="js-tag color2">swoole</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工具使用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -452,7 +1307,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+                <a href="javascript:void(0)" class="js-tag color5">单元测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">unittest</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -460,11 +1323,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">接口协议与抓包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">接口测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">正则</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color2">jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -477,10 +1356,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">经历</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">swoole</a>
               </li>
             
             <div class="clearfix"></div>
